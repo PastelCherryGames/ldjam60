@@ -11,8 +11,22 @@ config_version=5
 [application]
 
 config/name="LDJam60"
+run/main_scene="uid://cpaxcy3wve4ci"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*uid://h5fkcbd4oja2"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=768
+
+[gui]
+
+theme/custom="uid://bpt776hwwgsfj"
 
 [physics]
 

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://h5fkcbd4oja2"]
+
+[ext_resource type="Script" uid="uid://cycabrwenkh3b" path="res://scripts/utility/game_state.gd" id="1_321hb"]
+
+[node name="GameState" type="Node" unique_id=1718591218]
+script = ExtResource("1_321hb")
+app_names = Dictionary[int, String]({
+0: "Email",
+1: "Internet",
+2: "Blog",
+3: "Portal"
+})
