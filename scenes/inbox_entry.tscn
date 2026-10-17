@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://n7yrxfnveo5k"]
+
+[ext_resource type="Script" uid="uid://bklihl8f00kn" path="res://scripts/inbox_entry.gd" id="1_yvcsv"]
+[ext_resource type="Texture2D" uid="uid://bimrq7mw83cy5" path="res://icon.svg" id="2_yvtno"]
+[ext_resource type="LabelSettings" uid="uid://j72oxc0ukosw" path="res://assets/font_settings/title.tres" id="3_lcm1s"]
+[ext_resource type="Script" uid="uid://x7hvpl77l40i" path="res://scripts/utility/custom_tweener.gd" id="3_vfeh0"]
+[ext_resource type="LabelSettings" uid="uid://tk4p3dwd1w76" path="res://assets/font_settings/subtitle.tres" id="4_f6685"]
+[ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="4_lcm1s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85g3d"]
+bg_color = Color(0.75, 0.8958334, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.29411766, 0.6392157, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 2)
+
+[sub_resource type="Resource" id="Resource_choun"]
+script = ExtResource("4_lcm1s")
+nodepath = NodePath("../HoverPanel")
+property = "modulate"
+values = {
+false: Color(1, 1, 1, 1),
+true: Color(0.7176471, 0.75686276, 0.9098039, 1)
+}
+metadata/_custom_type_script = "uid://cxdonqanebxtv"
+
+[sub_resource type="Resource" id="Resource_ya4ey"]
+script = ExtResource("4_lcm1s")
+nodepath = NodePath("../HoverPanel")
+property = "modulate"
+values = {
+false: Color(1, 1, 1, 0),
+true: Color(1, 1, 1, 1)
+}
+metadata/_custom_type_script = "uid://cxdonqanebxtv"
+
+[node name="InboxEntry" type="MarginContainer" unique_id=1398195361]
+script = ExtResource("1_yvcsv")
+
+[node name="HoverPanel" type="Panel" parent="." unique_id=1033263481]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_85g3d")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=827374011]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=870265005]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="EmailIcon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=891643727]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_yvtno")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=933319250]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SubjectLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1911934651]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Email Subject"
+label_settings = ExtResource("3_lcm1s")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1090068671]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/MarginContainer" unique_id=61448403]
+layout_mode = 2
+
+[node name="FromLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=929374152]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Old Tech Enthusiast"
+label_settings = ExtResource("4_f6685")
+
+[node name="CustomTweener" type="Node" parent="." unique_id=1757454756 node_paths=PackedStringArray("trigger_button")]
+script = ExtResource("3_vfeh0")
+signal_trigger = 2
+properties_to_tween = Array[ExtResource("4_lcm1s")]([SubResource("Resource_choun")])
+focus_time = 0.0
+unfocus_time = 0.0
+trigger_button = NodePath("../OwnButton")
+tween_in_out = true
+in_out_delay = 0.175
+metadata/_custom_type_script = "uid://x7hvpl77l40i"
+
+[node name="OwnButton" type="TextureButton" parent="." unique_id=20519200]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+script = ExtResource("3_vfeh0")
+properties_to_tween = Array[ExtResource("4_lcm1s")]([SubResource("Resource_ya4ey")])
+focus_time = 0.0
+unfocus_time = 0.0

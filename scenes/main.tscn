@@ -3,7 +3,12 @@
 [ext_resource type="Script" uid="uid://invlqc442atl" path="res://scripts/main.gd" id="1_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://dkoh0b4nwi0fy" path="res://assets/windows_xp_16.jpg" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dd7pkvvr8ro08" path="res://scenes/custom_window.tscn" id="2_sugp2"]
+[ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading1.tres" id="4_tbgi4"]
+[ext_resource type="Script" uid="uid://u8jrdquj7tbe" path="res://scripts/email_app.gd" id="4_tefeu"]
 [ext_resource type="Script" uid="uid://cv0np0gy7ab7n" path="res://scripts/task_bar.gd" id="5_tbgi4"]
+[ext_resource type="StyleBox" uid="uid://bkpi5rbibnb7u" path="res://assets/styleboxes/vseparator_style_box_line.tres" id="6_o6xl0"]
+[ext_resource type="LabelSettings" uid="uid://tk4p3dwd1w76" path="res://assets/font_settings/subtitle.tres" id="7_tipki"]
+[ext_resource type="Script" uid="uid://bcxi33vitf7ts" path="res://scripts/internet_app.gd" id="8_85g3d"]
 
 [sub_resource type="Gradient" id="Gradient_sgp6g"]
 offsets = PackedFloat32Array(0.7098214, 1)
@@ -63,29 +68,156 @@ layout_mode = 2
 texture = SubResource("GradientTexture2D_o5qli")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1886927886]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=236129290]
 layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1886927886]
+layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 130
+theme_override_constants/margin_bottom = 0
 
-[node name="WindowControl" type="Control" parent="MarginContainer/MarginContainer" unique_id=994279603]
+[node name="WindowControl" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=994279603]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="CustomWindow" parent="MarginContainer/MarginContainer/WindowControl" unique_id=122213665 instance=ExtResource("2_sugp2")]
+[node name="EmailWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=122213665 instance=ExtResource("2_sugp2")]
+visible = false
 layout_mode = 1
+script = ExtResource("4_tefeu")
 
-[node name="CustomWindow2" parent="MarginContainer/MarginContainer/WindowControl" unique_id=370046192 instance=ExtResource("2_sugp2")]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer" parent_id_path=PackedInt32Array(122213665, 722223955) index="0" unique_id=1939434558]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Inbox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer" unique_id=2088943985]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Inbox" unique_id=1183717416]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+
+[node name="InboxLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Inbox/MarginContainer" unique_id=180303702]
+layout_mode = 2
+text = "Inbox"
+label_settings = ExtResource("4_tbgi4")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Inbox" unique_id=2094972108]
+visible = false
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.85, 0.85, 0.85, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Inbox" unique_id=318466514]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Inbox/ScrollContainer" unique_id=1982247764]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 10
+
+[node name="InboxVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Inbox/ScrollContainer/MarginContainer" unique_id=1223854010]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer" unique_id=1516661383]
+layout_mode = 2
+theme_override_constants/margin_right = 10
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/MarginContainer" unique_id=1655954238]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("6_o6xl0")
+
+[node name="Details" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer" unique_id=543712637]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DetailsVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details" unique_id=338749117]
+layout_mode = 2
+
+[node name="SubjectLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox" unique_id=2099941076]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Email 1"
+label_settings = ExtResource("4_tbgi4")
+
+[node name="FromHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox" unique_id=504134769]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox/FromHBox" unique_id=903119950]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+
+[node name="SectionLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox/FromHBox/MarginContainer" unique_id=2013670282]
+layout_mode = 2
+text = "From:"
+label_settings = ExtResource("7_tipki")
+
+[node name="FromLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox/FromHBox" unique_id=2136687195]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Sender"
+label_settings = ExtResource("7_tipki")
+
+[node name="ToHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox" unique_id=126149205]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox/ToHBox" unique_id=308188187]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+
+[node name="SectionLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox/ToHBox/MarginContainer" unique_id=1504441048]
+layout_mode = 2
+text = "To:"
+label_settings = ExtResource("7_tipki")
+
+[node name="ToLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox/ToHBox" unique_id=93888481]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Receiver"
+label_settings = ExtResource("7_tipki")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details" unique_id=1508794307]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 12
+
+[node name="BodyLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/MarginContainer" unique_id=14609522]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 18
+theme_override_font_sizes/bold_italics_font_size = 18
+theme_override_font_sizes/italics_font_size = 18
+theme_override_font_sizes/mono_font_size = 18
+fit_content = true
+
+[node name="InternetWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=370046192 instance=ExtResource("2_sugp2")]
 layout_mode = 1
+script = ExtResource("8_85g3d")
 own_app = 1
 
-[node name="CustomWindow3" parent="MarginContainer/MarginContainer/WindowControl" unique_id=512429714 instance=ExtResource("2_sugp2")]
+[node name="BlogWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=512429714 instance=ExtResource("2_sugp2")]
+visible = false
 layout_mode = 1
 own_app = 2
 
-[node name="TaskBar" type="PanelContainer" parent="MarginContainer" unique_id=519065725]
+[node name="TaskBar" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=519065725]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -93,55 +225,61 @@ size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_sugp2")
 script = ExtResource("5_tbgi4")
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/TaskBar" unique_id=877411096]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/TaskBar" unique_id=877411096]
 clip_children = 1
 z_index = 100
-custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_sgp6g")
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/TaskBar/PanelContainer" unique_id=1809542644]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer" unique_id=1809542644]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_jyhfs")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TaskBar/PanelContainer/PanelContainer" unique_id=2085799246]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer" unique_id=2085799246]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer" unique_id=1871637333]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer" unique_id=1871637333]
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="EmailButton" type="Button" parent="MarginContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1967152088]
+[node name="EmailButton" type="Button" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1967152088]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 text = "Email"
 
-[node name="InternetButton" type="Button" parent="MarginContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=151708808]
+[node name="InternetButton" type="Button" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=151708808]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 text = "Internet"
 
-[node name="BlogButton" type="Button" parent="MarginContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1636285795]
+[node name="BlogButton" type="Button" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1636285795]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 text = "Blog"
 
-[node name="PortalButton" type="Button" parent="MarginContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1500894864]
+[node name="PortalButton" type="Button" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1500894864]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 text = "(Company) Portal"
+
+[editable path="MarginContainer/VBoxContainer/MarginContainer/WindowControl/EmailWindow"]
+[editable path="MarginContainer/VBoxContainer/MarginContainer/WindowControl/InternetWindow"]

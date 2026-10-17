@@ -6,6 +6,10 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
 draw_center = false
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 shadow_color = Color(0, 0, 0, 0.39215687)
 shadow_size = 6
 
@@ -29,6 +33,12 @@ true: Color(1, 1, 1, 1)
 }
 metadata/_custom_type_script = "uid://cxdonqanebxtv"
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63u0e"]
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [sub_resource type="Gradient" id="Gradient_o5qli"]
 offsets = PackedFloat32Array(0, 0.390625, 0.78125, 1)
 colors = PackedColorArray(0.5751, 0.5751, 0.71, 1, 0.7047, 0.70645505, 0.81, 1, 0.57254905, 0.57254905, 0.7058824, 1, 0.66630745, 0.6672162, 0.78315854, 1)
@@ -39,6 +49,35 @@ gradient = SubResource("Gradient_o5qli")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sugp2"]
 texture = SubResource("GradientTexture2D_0wfyh")
 modulate_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ta81"]
+font_color = Color(0.2, 0.2, 0.2, 1)
+outline_size = 1
+outline_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ta81"]
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvefq"]
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_padt6"]
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wfyh"]
 bg_color = Color(1, 1, 1, 1)
@@ -74,37 +113,51 @@ hide_show_node = NodePath("..")
 hide_show_with_tween = true
 metadata/_custom_type_script = "uid://x7hvpl77l40i"
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1815138627]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2086982906]
+clip_children = 1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_63u0e")
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer" unique_id=1815138627]
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_sugp2")
 
-[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer" unique_id=549768957]
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/PanelContainer" unique_id=549768957]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 mouse_filter = 2
 
-[node name="WindowLabel" type="Label" parent="PanelContainer/MarginContainer3" unique_id=1749945117]
+[node name="WindowLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer3" unique_id=1749945117]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Window Name"
+label_settings = SubResource("LabelSettings_8ta81")
 
-[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer" unique_id=709406097]
-custom_minimum_size = Vector2(0, 30)
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/PanelContainer" unique_id=709406097]
+custom_minimum_size = Vector2(40, 30)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 mouse_filter = 2
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
 
-[node name="CloseButton" type="Button" parent="PanelContainer/MarginContainer2" unique_id=1593755636]
+[node name="CloseButton" type="Button" parent="PanelContainer/PanelContainer/MarginContainer2" unique_id=1593755636]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ta81")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yvefq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_padt6")
 text = "X"
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=747586950]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer" unique_id=747586950]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 10
@@ -112,12 +165,15 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer" unique_id=1198304804]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/PanelContainer/MarginContainer" unique_id=1198304804]
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0wfyh")
 
-[node name="ContentContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/PanelContainer" unique_id=722223955]
+[node name="ContentContainer" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer" unique_id=722223955]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20

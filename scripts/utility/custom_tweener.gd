@@ -54,6 +54,9 @@ func _ready() -> void:
 			self.mouse_exited.connect(toggle.bind(false))
 	elif signal_trigger == UI_Signals.PRESS && trigger_button != null:
 		trigger_button.pressed.connect(toggle.bind(true))
+	
+	if hide_show_with_tween && hide_show_node != null && set_params_on_start:
+		hide_show_node.hide()
 
 
 #func _process(delta: float) -> void:

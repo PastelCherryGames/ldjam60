@@ -1,6 +1,31 @@
 [gd_scene format=3 uid="uid://h5fkcbd4oja2"]
 
 [ext_resource type="Script" uid="uid://cycabrwenkh3b" path="res://scripts/utility/game_state.gd" id="1_321hb"]
+[ext_resource type="Script" uid="uid://bqe706jnsw83u" path="res://scripts/custom_resources/email_res.gd" id="2_0ebsy"]
+[ext_resource type="PackedScene" uid="uid://n7yrxfnveo5k" path="res://scenes/inbox_entry.tscn" id="2_jy5aj"]
+[ext_resource type="Texture2D" uid="uid://bimrq7mw83cy5" path="res://icon.svg" id="3_gu6ud"]
+[ext_resource type="Texture2D" uid="uid://lplnyxyoqfku" path="res://assets/cozy-bear-palette.png" id="4_0ebsy"]
+
+[sub_resource type="Resource" id="Resource_2cevy"]
+script = ExtResource("2_0ebsy")
+id = 0
+email_subject = "email 1"
+email_from = "sender 1"
+email_to = "receiver 1"
+email_body = "Hi this is email 1
+This is a new line"
+sent = true
+read = true
+
+[sub_resource type="Resource" id="Resource_q5byu"]
+script = ExtResource("2_0ebsy")
+id = 1
+email_subject = "email 2"
+email_from = "sender 2"
+email_to = "receiver 2"
+email_body = "Hi this is email 2
+This is a new line"
+sent = true
 
 [node name="GameState" type="Node" unique_id=1718591218]
 script = ExtResource("1_321hb")
@@ -10,3 +35,7 @@ app_names = Dictionary[int, String]({
 2: "Blog",
 3: "Portal"
 })
+emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_2cevy"), SubResource("Resource_q5byu")])
+inbox_entry_scene = ExtResource("2_jy5aj")
+unread_email_icon = ExtResource("3_gu6ud")
+read_email_icon = ExtResource("4_0ebsy")

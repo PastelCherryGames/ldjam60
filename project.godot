@@ -27,6 +27,7 @@ window/size/viewport_height=768
 [gui]
 
 theme/custom="uid://bpt776hwwgsfj"
+theme/custom_font="uid://qmndatfmyimu"
 
 [physics]
 
