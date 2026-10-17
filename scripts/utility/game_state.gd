@@ -12,6 +12,8 @@ signal blog_post_submitted(post_id: int)
 signal blog_post_published(post_id: int)
 
 
+const UI_PAUSE_LENGTH: float = 0.075
+
 @export var app_names: Dictionary[E.App, String] = {}
 @export var emails: Array[EmailRes] = []:
 	set(new_emails):
@@ -41,6 +43,8 @@ var search_history_position_offset: int = -1
 @export_group('Assets')
 @export var unread_email_icon: Texture2D
 @export var read_email_icon: Texture2D
+@export var entry_hover_style_box: StyleBox
+@export var entry_press_style_box: StyleBox
 
 
 func _ready() -> void:

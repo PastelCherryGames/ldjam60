@@ -40,7 +40,7 @@ func _refresh_emails() -> void:
 func _show_email_details(email_id: int) -> void:
 	var email = GameState.get_entry(GameState.emails, email_id)
 	if email is not EmailRes: return
-	
+	await get_tree().create_timer(GameState.UI_PAUSE_LENGTH).timeout
 	email.read = true
 	subject_label.text = email.email_subject
 	from_label.text = email.email_from

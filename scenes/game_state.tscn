@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://b7agwcrdnkjay" path="res://scripts/custom_resources/search_result_res.gd" id="3_2cevy"]
 [ext_resource type="Texture2D" uid="uid://bimrq7mw83cy5" path="res://icon.svg" id="3_gu6ud"]
 [ext_resource type="Texture2D" uid="uid://lplnyxyoqfku" path="res://assets/cozy-bear-palette.png" id="4_0ebsy"]
+[ext_resource type="StyleBox" uid="uid://cm15eel8g2amy" path="res://assets/styleboxes/entry_hover_style_box_flat.tres" id="7_vsyf1"]
+[ext_resource type="StyleBox" uid="uid://6fsycgg7rgdq" path="res://assets/styleboxes/entry_press_style_box_flat.tres" id="8_3oy0g"]
 
 [sub_resource type="Resource" id="Resource_2cevy"]
 script = ExtResource("2_0ebsy")
@@ -64,3 +66,5 @@ Did you misspell something?"
 inbox_entry_scene = ExtResource("2_jy5aj")
 unread_email_icon = ExtResource("3_gu6ud")
 read_email_icon = ExtResource("4_0ebsy")
+entry_hover_style_box = ExtResource("7_vsyf1")
+entry_press_style_box = ExtResource("8_3oy0g")

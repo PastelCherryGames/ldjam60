@@ -1,26 +1,12 @@
 [gd_scene format=3 uid="uid://n7yrxfnveo5k"]
 
 [ext_resource type="Script" uid="uid://bklihl8f00kn" path="res://scripts/inbox_entry.gd" id="1_yvcsv"]
+[ext_resource type="StyleBox" uid="uid://cm15eel8g2amy" path="res://assets/styleboxes/entry_hover_style_box_flat.tres" id="2_lcm1s"]
 [ext_resource type="Texture2D" uid="uid://bimrq7mw83cy5" path="res://icon.svg" id="2_yvtno"]
 [ext_resource type="LabelSettings" uid="uid://j72oxc0ukosw" path="res://assets/font_settings/title.tres" id="3_lcm1s"]
 [ext_resource type="Script" uid="uid://x7hvpl77l40i" path="res://scripts/utility/custom_tweener.gd" id="3_vfeh0"]
 [ext_resource type="LabelSettings" uid="uid://tk4p3dwd1w76" path="res://assets/font_settings/subtitle.tres" id="4_f6685"]
 [ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="4_lcm1s"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85g3d"]
-bg_color = Color(0.75, 0.8958334, 1, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.2, 0.29411766, 0.6392157, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-shadow_color = Color(0, 0, 0, 0.39215687)
-shadow_size = 3
-shadow_offset = Vector2(-1, 2)
 
 [sub_resource type="Resource" id="Resource_choun"]
 script = ExtResource("4_lcm1s")
@@ -48,7 +34,7 @@ script = ExtResource("1_yvcsv")
 [node name="HoverPanel" type="Panel" parent="." unique_id=1033263481]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_85g3d")
+theme_override_styles/panel = ExtResource("2_lcm1s")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=827374011]
 layout_mode = 2
