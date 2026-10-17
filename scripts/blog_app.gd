@@ -8,6 +8,7 @@ class_name BlogApp
 
 func _ready() -> void:
 	super()
+	GameState.blog_post_unlocked.connect(_refresh_posts)
 	_refresh_infos()
 	_refresh_posts()
 

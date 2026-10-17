@@ -22,8 +22,8 @@ email_from = "sender 1"
 email_to = "receiver 1"
 email_body = "Hi this is email 1
 This is a new line"
-sent_index = 1
-read = true
+email_num_blog_posts = -1
+sent_index = 0
 
 [sub_resource type="Resource" id="Resource_q5byu"]
 script = ExtResource("2_0ebsy")
@@ -33,7 +33,7 @@ email_from = "sender 2"
 email_to = "receiver 2"
 email_body = "Hi this is email 2
 This is a new line"
-sent_index = 0
+email_num_blog_posts = 1
 
 [sub_resource type="Resource" id="Resource_vsyf1"]
 script = ExtResource("3_2cevy")
@@ -62,7 +62,7 @@ id = 0
 post_title = "Test Blog"
 post_blurb = "You did it!"
 post_required_infos = Array[int]([0])
-unlocked_index = 0
+email_prereqs = Array[int]([0])
 
 [sub_resource type="Resource" id="Resource_ou381"]
 script = ExtResource("4_q5byu")

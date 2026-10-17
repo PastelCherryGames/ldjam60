@@ -11,7 +11,7 @@ class_name EmailRes
 @export var email_to: String = ''
 @export_multiline var email_body: String = ''
 ## The number of blog posts required to show this email.
-@export var email_num_blog_posts: int = -1
+@export var email_num_blog_posts: int = 0
 ## The specific blog posts required to show this email.
 @export var email_prereq_blog_posts: Array[int] = []
 

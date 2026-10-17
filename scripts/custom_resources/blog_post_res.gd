@@ -10,6 +10,10 @@ class_name BlogPostRes
 @export_multiline var post_blurb: String = ''
 @export var post_required_infos: Array[int] = []
 
+@export_group('Unlock Requirements')
+@export var email_prereqs: Array[int] = []
+@export var info_prereqs: Array[int] = []
+
 @export_group('Hidden')
 ## Controls the order blog posts are show in.
 @export var unlocked_index: int = -1

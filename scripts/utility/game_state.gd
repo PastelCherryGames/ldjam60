@@ -5,13 +5,11 @@ extends Node
 
 @warning_ignore("unused_signal")
 signal app_requested(app: E.App)
-@warning_ignore("unused_signal")
 signal email_read(email_id: int)
-@warning_ignore("unused_signal")
 signal search_result_discovered(result_id: int)
 @warning_ignore("unused_signal")
 signal info_selected()
-@warning_ignore("unused_signal")
+signal blog_post_unlocked()
 signal blog_post_submitted(post_id: int)
 signal blog_post_published(post_id: int)
 
@@ -94,6 +92,8 @@ var selected_info: int = -1
 
 func _ready() -> void:
 	if Engine.is_editor_hint(): return
+	email_read.connect(_check_if_unlock_blog_post.unbind(1))
+	search_result_discovered.connect(_check_if_unlock_blog_post.unbind(1))
 	blog_post_submitted.connect(_handle_submitted_blog_post)
 
 
@@ -143,11 +143,43 @@ func sort_infos(a: InfoRes, b: InfoRes) -> bool:
 
 
 func _handle_submitted_blog_post(post_id: int) -> void:
+	var published_post_count: int = 0
+	for post in blog_posts:
+		if post.published_index > -1:
+			published_post_count += 1
 	for email in emails:
-		pass # check if email should be marked read
+		if email.sent_index > -1: continue
+		var send_email := true
+		if published_post_count < email.email_num_blog_posts:
+			send_email = false
+			continue
+		for prereq in email.email_prereq_blog_posts:
+			if get_entry(blog_posts, prereq).published_index < 0:
+				send_email = false
+		if send_email:
+			email.sent_index = get_found_index(emails, 'sent_index')
 	
+	await get_tree().create_timer(GameState.UI_PAUSE_LENGTH).timeout
 	blog_post_published.emit(post_id)
 
+
+func _check_if_unlock_blog_post() -> void:
+	var a_post_was_unlocked := false
+	for post in blog_posts:
+		if post.unlocked_index > -1: continue
+		var unlock_post := true
+		for email_id in post.email_prereqs:
+			var email = get_entry(emails, email_id)
+			if !email.read: unlock_post = false
+		for info_id in post.info_prereqs:
+			var info = get_entry(infos, info_id)
+			if info.discovered_index < 0: unlock_post = false
+		if unlock_post:
+			a_post_was_unlocked = true
+			post.unlocked_index = get_found_index(blog_posts, 'unlocked_index')
+	
+	await get_tree().create_timer(GameState.UI_PAUSE_LENGTH).timeout
+	if a_post_was_unlocked: blog_post_unlocked.emit()
 
 
 

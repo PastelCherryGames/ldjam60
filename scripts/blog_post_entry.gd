@@ -35,6 +35,7 @@ func set_up_blog_post(post: BlogPostRes) -> void:
 	publish_button.pressed.connect(_publish_post.bind(true))
 	
 	if post.published_index > -1: _publish_post(false)
+	else: _check_if_can_publish_post()
 
 
 func _update_assigned_infos() -> void:
@@ -65,5 +66,5 @@ func _publish_post(emit: bool) -> void:
 	publish_button.disabled = true
 	publish_button.text = 'Published'
 	if emit:
-		GameState.blog_post_submitted.emit(own_post_id)
 		GameState.get_entry(GameState.blog_posts, own_post_id).published_index = GameState.get_found_index(GameState.blog_posts, 'published_index')
+		GameState.blog_post_submitted.emit(own_post_id)
