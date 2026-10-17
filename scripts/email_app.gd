@@ -14,13 +14,14 @@ func _ready() -> void:
 	super()
 	GameState.blog_post_published.connect(_refresh_emails.unbind(1))
 	details.hide()
+	body_label.text = ''
 	_refresh_emails()
 
 
 func toggle_window(should_show: bool) -> void:
 	super(should_show)
 	if should_show:
-		details.hide()
+		#details.hide()
 		_refresh_emails()
 
 
@@ -47,3 +48,4 @@ func _show_email_details(email_id: int) -> void:
 	to_label.text = email.email_to
 	body_label.text = email.email_body
 	details.show()
+	GameState.email_read.emit(email_id)

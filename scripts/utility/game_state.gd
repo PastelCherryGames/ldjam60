@@ -6,6 +6,8 @@ extends Node
 @warning_ignore("unused_signal")
 signal app_requested(app: E.App)
 @warning_ignore("unused_signal")
+signal email_read(email_id: int)
+@warning_ignore("unused_signal")
 signal search_result_discovered(result_id: int)
 @warning_ignore("unused_signal")
 signal blog_post_submitted(post_id: int)
@@ -36,13 +38,25 @@ const UI_PAUSE_LENGTH: float = 0.075
 @export_multiline var no_results_message: String = ''
 var search_history: Array[int] = []
 var search_history_position_offset: int = -1
+@export var portal_search_results: Array[SearchResultRes] = []:
+	set(new_search_results):
+		if Engine.is_editor_hint():
+			for index in new_search_results.size():
+				if new_search_results[index] == null:
+					new_search_results[index] = SearchResultRes.new()
+					var new_search_result_id: int = GameState.get_next_id(portal_search_results)
+					new_search_results[index].id = new_search_result_id
+		portal_search_results = new_search_results
+@export_multiline var portal_no_results_message: String = ''
+var portal_search_history: Array[int] = []
+var portal_search_history_position_offset: int = -1
 
 @export_group('Scenes')
 @export var inbox_entry_scene: PackedScene
 
 @export_group('Assets')
-@export var unread_email_icon: Texture2D
-@export var read_email_icon: Texture2D
+#@export var unread_email_icon: Texture2D
+#@export var read_email_icon: Texture2D
 @export var entry_hover_style_box: StyleBox
 @export var entry_press_style_box: StyleBox
 
@@ -79,9 +93,11 @@ func _handle_submitted_blog_post(post_id: int) -> void:
 
 
 ## DOUBLE CHECK THIS AND SET WHAT LENGTH SHOULD BE BEFORE SHIPPING
-func get_longest_search_keyword_length() -> int:
+func get_longest_search_keyword_length(app: E.App) -> int:
 	var longest: int = 20
-	for search_result in search_results:
+	var database: Array[SearchResultRes] = search_results
+	if app == E.App.PORTAL: database = portal_search_results
+	for search_result in database:
 		for keyword in search_result.search_result_keywords:
 			if keyword.length() > longest:
 				longest = keyword.length()
@@ -90,9 +106,11 @@ func get_longest_search_keyword_length() -> int:
 
 
 ## FOR DEBUG
-func _check_if_search_keyword_exists(search_keyword: String) -> void:
+func _check_if_search_keyword_exists(search_keyword: String, app: E.App) -> void:
 	var ids := ''
-	for search_result in search_results:
+	var database: Array[SearchResultRes] = search_results
+	if app == E.App.PORTAL: database = portal_search_results
+	for search_result in database:
 		if search_result.search_result_keywords.has(search_keyword):
 			if ids.length() > 0: ids += ', '
 			ids += str(search_result.id)

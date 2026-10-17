@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://x7hvpl77l40i" path="res://scripts/utility/custom_tweener.gd" id="3_vfeh0"]
 [ext_resource type="LabelSettings" uid="uid://tk4p3dwd1w76" path="res://assets/font_settings/subtitle.tres" id="4_f6685"]
 [ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="4_lcm1s"]
+[ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="4_yfjop"]
 
 [sub_resource type="Resource" id="Resource_choun"]
 script = ExtResource("4_lcm1s")
@@ -47,15 +48,32 @@ theme_override_constants/margin_bottom = 4
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="EmailIcon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=891643727]
-unique_name_in_owner = true
+[node name="Anchor" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1168826586]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="EmailIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/Anchor" unique_id=891643727]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 30.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("2_yvtno")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="AlertIcon" parent="MarginContainer/HBoxContainer/Anchor" unique_id=1456460316 instance=ExtResource("4_yfjop")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 25.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=933319250]
 layout_mode = 2

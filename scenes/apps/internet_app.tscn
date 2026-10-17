@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://dq5e0jp5my7vu"]
+
+[ext_resource type="PackedScene" uid="uid://dd7pkvvr8ro08" path="res://scenes/apps/custom_window.tscn" id="1_kdwcg"]
+[ext_resource type="Script" uid="uid://bcxi33vitf7ts" path="res://scripts/internet_app.gd" id="2_i3r6f"]
+[ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading1.tres" id="2_koxxv"]
+[ext_resource type="PackedScene" uid="uid://cxe6e7oxdoghe" path="res://scenes/notify_entry.tscn" id="4_i1rki"]
+[ext_resource type="StyleBox" uid="uid://d4e5fae8bibow" path="res://assets/styleboxes/entry_secondary_hover_style_box_flat.tres" id="5_tvlnh"]
+
+[node name="InternetWindow" unique_id=122213665 instance=ExtResource("1_kdwcg")]
+script = ExtResource("2_i3r6f")
+own_app = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer" parent_id_path=PackedInt32Array(722223955) index="0" unique_id=189344090]
+layout_mode = 2
+theme_override_constants/margin_left = 130
+theme_override_constants/margin_right = 130
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer" index="0" unique_id=1645606800]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="InternetLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer" index="0" unique_id=655535070]
+layout_mode = 2
+text = "Search the Internet!"
+label_settings = ExtResource("2_koxxv")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer" index="1" unique_id=86952388]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="SearchLineEdit" type="LineEdit" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/HBoxContainer" index="0" unique_id=1837608664]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+context_menu_enabled = false
+emoji_menu_enabled = false
+clear_button_enabled = true
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+
+[node name="Spacer" type="Control" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/HBoxContainer" index="1" unique_id=2054951490]
+layout_mode = 2
+
+[node name="SearchButton" type="Button" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/HBoxContainer" index="2" unique_id=56632278]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Search"
+
+[node name="BackButton" type="Button" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/HBoxContainer" index="3" unique_id=2037046159]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_type_variation = &"SecondaryButton"
+text = "Back"
+
+[node name="ForwardButton" type="Button" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/HBoxContainer" index="4" unique_id=1708732788]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_type_variation = &"SecondaryButton"
+text = "Forward"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer" index="2" unique_id=1926922956]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer" index="3" unique_id=1690375362]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/MarginContainer" index="0" unique_id=1257172325]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer" index="0" unique_id=1355777835]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SearchResultLabel" type="RichTextLabel" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer" index="0" unique_id=458466989]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "oi jjd dflksjd lkjldj lsjlkdj lfskdf; sdlsl sdkjf lsdjl ldsjfl sjdlkfj lsj sdkjflsdjflk
+slkdfj lsdjfl sdlkf
+sdkj lsdkjds
+
+
+sdfkl lskdflkl s
+d sl;fjk
+
+dkfljs lksjdf lksd
+sf
+sdk fjsd
+
+sd;fkjd;fkj sdf
+
+
+sdk;f lfkdjs
+
+sdk ;lsdf;kljlsdk
+;sd;fkj ;sd
+sdkflj sdkl
+sdfkj sdklflsd
+sdlf jsldkjf
+sdklfj sfdkj
+
+fsdkj hf"
+fit_content = true
+scroll_active = false
+
+[node name="Spacer" type="Control" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer" index="1" unique_id=515866868]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+
+[node name="NotifyVBox" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer" parent_id_path=PackedInt32Array(722223955) index="1" unique_id=2071840509]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 6
+alignment = 2
+
+[node name="NotifyInfoEntry" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox" index="0" unique_id=213704604 instance=ExtResource("4_i1rki")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="NotifyLabel" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifyInfoEntry/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(213704604, 652084115) index="0" unique_id=1059113113]
+text = "New Info Discovered!"
+
+[node name="NotifyVisitedEntry" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox" index="1" unique_id=136543096 instance=ExtResource("4_i1rki")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/panel = ExtResource("5_tvlnh")
+
+[editable path="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifyInfoEntry"]
+[editable path="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifyVisitedEntry"]

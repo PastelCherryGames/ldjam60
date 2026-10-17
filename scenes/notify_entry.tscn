@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cxe6e7oxdoghe"]
+
+[ext_resource type="StyleBox" uid="uid://cm15eel8g2amy" path="res://assets/styleboxes/entry_hover_style_box_flat.tres" id="1_q0v35"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_85g3d"]
+font_size = 14
+font_color = Color(0.15, 0.15, 0.15, 1)
+
+[node name="NotifyEntry" type="PanelContainer" unique_id=213704604]
+theme_override_styles/panel = ExtResource("1_q0v35")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1644103164]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=652084115]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NotifyLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1059113113]
+layout_mode = 2
+text = "Page Previously Visited"
+label_settings = SubResource("LabelSettings_85g3d")

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://k8qq23qn7uwu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_choun"]
+bg_color = Color(0.765, 0.8235, 0.9, 0.78431374)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_choun"]
+font_size = 20
+font_color = Color(1, 0, 0, 1)
+outline_size = 2
+outline_color = Color(1, 0, 0, 1)
+
+[node name="AlertIcon" type="PanelContainer" unique_id=1456460316]
+offset_left = -12.0
+offset_top = -10.0
+offset_right = 11.0
+offset_bottom = 13.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_choun")
+
+[node name="Control" type="Control" parent="." unique_id=1638808467]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Control" unique_id=1912547325]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.5
+offset_top = -15.0
+offset_right = 6.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "!"
+label_settings = SubResource("LabelSettings_choun")
+horizontal_alignment = 1
+vertical_alignment = 1

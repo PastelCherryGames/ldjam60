@@ -3,7 +3,8 @@ class_name InboxEntry
 
 
 @onready var hover_panel: Panel = %HoverPanel
-@onready var email_icon: TextureRect = %EmailIcon
+#@onready var email_icon: TextureRect = %EmailIcon
+@onready var alert_icon: Container = %AlertIcon
 @onready var subject_label: Label = %SubjectLabel
 @onready var from_label: Label = %FromLabel
 @onready var own_button: BaseButton = %OwnButton
@@ -11,7 +12,8 @@ class_name InboxEntry
 
 func _check_refs() -> void:
 	if hover_panel == null: hover_panel = %HoverPanel
-	if email_icon == null: email_icon = %EmailIcon
+	#if email_icon == null: email_icon = %EmailIcon
+	if alert_icon == null: alert_icon = %AlertIcon
 	if subject_label == null: subject_label = %SubjectLabel
 	if from_label == null: from_label = %FromLabel
 	if own_button == null: own_button = %OwnButton
@@ -30,7 +32,8 @@ func set_up_inbox_entry(email: EmailRes) -> void:
 
 func _mark_read(delay: bool = true) -> void:
 	if delay: await get_tree().create_timer(GameState.UI_PAUSE_LENGTH).timeout
-	email_icon.texture = GameState.read_email_icon
+	alert_icon.hide()
+	#email_icon.texture = GameState.read_email_icon
 
 
 func _switch_entry_style_box(is_pressed: bool) -> void:
