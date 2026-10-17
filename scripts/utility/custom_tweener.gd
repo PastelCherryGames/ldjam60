@@ -7,6 +7,7 @@ signal tweener_destroy()
 
 enum Tween_Param_Type {NORMAL, SHADER, THEME_OVERRIDE}
 enum UI_Signals {UNHANDLED, FOCUS, PRESS}
+var toggle_state := false
 @export var signal_trigger: UI_Signals = UI_Signals.FOCUS
 @export var properties_to_tween: Array[CustomTweenRes] = []
 
@@ -28,7 +29,6 @@ enum UI_Signals {UNHANDLED, FOCUS, PRESS}
 @export var no_change_while_tweening := false
 
 var tween: Tween = null
-var toggle_state := false
 var show_change := true
 var paused_while_tweening := false
 
