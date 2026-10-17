@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://d30b73po6febn"]
+
+[ext_resource type="PackedScene" uid="uid://dd7pkvvr8ro08" path="res://scenes/apps/custom_window.tscn" id="1_2asar"]
+[ext_resource type="Script" uid="uid://cpfpsd3thufny" path="res://scripts/blog_app.gd" id="2_obpyt"]
+[ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading1.tres" id="3_ndd4w"]
+
+[node name="BlogWindow" unique_id=122213665 instance=ExtResource("1_2asar")]
+script = ExtResource("2_obpyt")
+own_app = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer" parent_id_path=PackedInt32Array(722223955) index="0" unique_id=1148550779]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Infos" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer" index="0" unique_id=1501517720]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos" index="0" unique_id=1406662213]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+
+[node name="InfosLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/MarginContainer" index="0" unique_id=1051747961]
+layout_mode = 2
+text = "Research"
+label_settings = ExtResource("3_ndd4w")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos" index="1" unique_id=577119186]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/ScrollContainer" index="0" unique_id=121621372]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 10
+
+[node name="InfosVBox" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/ScrollContainer/MarginContainer" index="0" unique_id=892232870]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer" index="1" unique_id=1681889623]
+layout_mode = 2
+theme_override_constants/margin_right = 10
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/MarginContainer" index="0" unique_id=105956063]
+layout_mode = 2
+
+[node name="BlogPosts" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer" index="2" unique_id=1588358331]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts" index="0" unique_id=230222980]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+
+[node name="BlogPostsLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer" index="0" unique_id=1418183552]
+layout_mode = 2
+text = "Blog Posts"
+label_settings = ExtResource("3_ndd4w")
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts" index="1" unique_id=270383983]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer2" index="0" unique_id=641649614]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer2/ScrollContainer" index="0" unique_id=37064535]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 10
+
+[node name="BlogPostsVBox" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer2/ScrollContainer/MarginContainer" index="0" unique_id=1129978511]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 2

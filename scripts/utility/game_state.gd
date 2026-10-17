@@ -10,6 +10,8 @@ signal email_read(email_id: int)
 @warning_ignore("unused_signal")
 signal search_result_discovered(result_id: int)
 @warning_ignore("unused_signal")
+signal info_selected()
+@warning_ignore("unused_signal")
 signal blog_post_submitted(post_id: int)
 signal blog_post_published(post_id: int)
 
@@ -35,9 +37,6 @@ const UI_PAUSE_LENGTH: float = 0.075
 					var new_search_result_id: int = GameState.get_next_id(search_results)
 					new_search_results[index].id = new_search_result_id
 		search_results = new_search_results
-@export_multiline var no_results_message: String = ''
-var search_history: Array[int] = []
-var search_history_position_offset: int = -1
 @export var portal_search_results: Array[SearchResultRes] = []:
 	set(new_search_results):
 		if Engine.is_editor_hint():
@@ -47,18 +46,50 @@ var search_history_position_offset: int = -1
 					var new_search_result_id: int = GameState.get_next_id(portal_search_results)
 					new_search_results[index].id = new_search_result_id
 		portal_search_results = new_search_results
+@export var blog_posts: Array[BlogPostRes] = []:
+	set(new_blog_posts):
+		if Engine.is_editor_hint():
+			for index in new_blog_posts.size():
+				if new_blog_posts[index] == null:
+					new_blog_posts[index] = BlogPostRes.new()
+					var new_post_id: int = GameState.get_next_id(blog_posts)
+					new_blog_posts[index].id = new_post_id
+		blog_posts = new_blog_posts
+@export var infos: Array[InfoRes] = []:
+	set(new_infos):
+		if Engine.is_editor_hint():
+			for index in new_infos.size():
+				if new_infos[index] == null:
+					new_infos[index] = InfoRes.new()
+					var new_info_id: int = GameState.get_next_id(infos)
+					new_infos[index].id = new_info_id
+		infos = new_infos
+
+@export_group('No Results Messages')
+@export_multiline var no_results_message: String = ''
 @export_multiline var portal_no_results_message: String = ''
+
+var search_history: Array[int] = []
+var search_history_position_offset: int = -1
 var portal_search_history: Array[int] = []
 var portal_search_history_position_offset: int = -1
 
+var selected_info: int = -1
+
+
 @export_group('Scenes')
 @export var inbox_entry_scene: PackedScene
+@export var info_entry_scene: PackedScene
+@export var blog_post_entry_scene: PackedScene
+@export var info_button_scene: PackedScene
 
 @export_group('Assets')
 #@export var unread_email_icon: Texture2D
 #@export var read_email_icon: Texture2D
 @export var entry_hover_style_box: StyleBox
 @export var entry_press_style_box: StyleBox
+@export var unpublished_post_style_box: StyleBox
+@export var published_post_style_box: StyleBox
 
 
 func _ready() -> void:
@@ -81,6 +112,34 @@ func get_entry(id_array: Array, search_id: int) -> Resource:
 	for entry in id_array:
 		if entry.id == search_id: return entry
 	return null
+
+
+func get_found_index(index_array: Array, prop_name: String) -> int:
+	var index_to_return: int = 0
+	for entry in index_array:
+		index_to_return = maxi(entry[prop_name], index_to_return)
+	return index_to_return + 1
+
+
+func sort_emails(a: EmailRes, b: EmailRes) -> bool:
+	return a.sent_index < b.sent_index
+
+
+func sort_blog_posts(a: BlogPostRes, b: BlogPostRes) -> bool:
+	if a.published_index < 0 && b.published_index > -1: return true
+	if (
+		(a.published_index > -1 && b.published_index > -1)
+		&& a.published_index > b.published_index
+	): return true
+	if (
+		(a.published_index < 0 && b.published_index < 0)
+		&& a.unlocked_index > b.unlocked_index
+	): return true
+	return false
+
+
+func sort_infos(a: InfoRes, b: InfoRes) -> bool:
+	return a.discovered_index < b.discovered_index
 
 
 func _handle_submitted_blog_post(post_id: int) -> void:

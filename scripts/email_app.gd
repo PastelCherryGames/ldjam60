@@ -29,8 +29,9 @@ func _refresh_emails() -> void:
 	for child in inbox_vbox.get_children():
 		inbox_vbox.remove_child(child)
 		child.queue_free()
+	GameState.emails.sort_custom(GameState.sort_emails)
 	for email in GameState.emails:
-		if email.sent:
+		if email.sent_index > -1:
 			var entry: InboxEntry = GameState.inbox_entry_scene.instantiate()
 			entry.set_up_inbox_entry(email)
 			entry.own_button.pressed.connect(_show_email_details.bind(email.id))

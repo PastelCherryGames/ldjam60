@@ -16,5 +16,5 @@ class_name EmailRes
 @export var email_prereq_blog_posts: Array[int] = []
 
 @export_group('Hidden')
-@export var sent := false
+@export var sent_index: int = -1
 @export var read := false

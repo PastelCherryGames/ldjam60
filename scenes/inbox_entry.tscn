@@ -9,16 +9,6 @@
 [ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="4_lcm1s"]
 [ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="4_yfjop"]
 
-[sub_resource type="Resource" id="Resource_choun"]
-script = ExtResource("4_lcm1s")
-nodepath = NodePath("../HoverPanel")
-property = "modulate"
-values = {
-false: Color(1, 1, 1, 1),
-true: Color(0.7176471, 0.75686276, 0.9098039, 1)
-}
-metadata/_custom_type_script = "uid://cxdonqanebxtv"
-
 [sub_resource type="Resource" id="Resource_ya4ey"]
 script = ExtResource("4_lcm1s")
 nodepath = NodePath("../HoverPanel")
@@ -39,7 +29,7 @@ theme_override_styles/panel = ExtResource("2_lcm1s")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=827374011]
 layout_mode = 2
-theme_override_constants/margin_left = 4
+theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 4
@@ -48,13 +38,14 @@ theme_override_constants/margin_bottom = 4
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Anchor" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1168826586]
+[node name="IconAnchor" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1168826586]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="EmailIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/Anchor" unique_id=891643727]
+[node name="EmailIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/IconAnchor" unique_id=891643727]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(30, 30)
@@ -67,7 +58,7 @@ texture = ExtResource("2_yvtno")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="AlertIcon" parent="MarginContainer/HBoxContainer/Anchor" unique_id=1456460316 instance=ExtResource("4_yfjop")]
+[node name="AlertIcon" parent="MarginContainer/HBoxContainer/IconAnchor" unique_id=1456460316 instance=ExtResource("4_yfjop")]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 2.0
@@ -97,17 +88,6 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Old Tech Enthusiast"
 label_settings = ExtResource("4_f6685")
-
-[node name="CustomTweener" type="Node" parent="." unique_id=1757454756 node_paths=PackedStringArray("trigger_button")]
-script = ExtResource("3_vfeh0")
-signal_trigger = 2
-properties_to_tween = Array[ExtResource("4_lcm1s")]([SubResource("Resource_choun")])
-focus_time = 0.0
-unfocus_time = 0.0
-trigger_button = NodePath("../OwnButton")
-tween_in_out = true
-in_out_delay = 0.175
-metadata/_custom_type_script = "uid://x7hvpl77l40i"
 
 [node name="OwnButton" type="TextureButton" parent="." unique_id=20519200]
 unique_name_in_owner = true

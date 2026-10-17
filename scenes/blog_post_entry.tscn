@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://hq12nkfnybko"]
+
+[ext_resource type="StyleBox" uid="uid://jo7o70j7wbfl" path="res://assets/styleboxes/post_unpublished_style_box_flat.tres" id="1_pebr2"]
+[ext_resource type="Script" uid="uid://dwj6hpjpu110m" path="res://scripts/blog_post_entry.gd" id="2_ptn6l"]
+[ext_resource type="Texture2D" uid="uid://bimrq7mw83cy5" path="res://icon.svg" id="3_a7wy5"]
+[ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="4_yqq31"]
+[ext_resource type="LabelSettings" uid="uid://j72oxc0ukosw" path="res://assets/font_settings/title.tres" id="5_svca4"]
+
+[node name="BlogPostEntry" type="PanelContainer" unique_id=1114982707]
+theme_override_styles/panel = ExtResource("1_pebr2")
+script = ExtResource("2_ptn6l")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=593364637]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1564862360]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="IconAnchor" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1705703631]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="EmailIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/IconAnchor" unique_id=1180099210]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 30.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("3_a7wy5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AlertIcon" parent="MarginContainer/HBoxContainer/IconAnchor" unique_id=1456460316 instance=ExtResource("4_yqq31")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 25.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1818384627]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1131291359]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Email Subject"
+label_settings = ExtResource("5_svca4")
+
+[node name="BlurbLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=299982715]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"SmallRichTextLabel"
+text = "This is a blurb for a blog post"
+fit_content = true
+
+[node name="InfosVBox" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1429834259]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PublishButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=843735787]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+disabled = true
+text = "Publish"

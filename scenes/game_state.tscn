@@ -4,8 +4,15 @@
 [ext_resource type="Script" uid="uid://bqe706jnsw83u" path="res://scripts/custom_resources/email_res.gd" id="2_0ebsy"]
 [ext_resource type="PackedScene" uid="uid://n7yrxfnveo5k" path="res://scenes/inbox_entry.tscn" id="2_jy5aj"]
 [ext_resource type="Script" uid="uid://b7agwcrdnkjay" path="res://scripts/custom_resources/search_result_res.gd" id="3_2cevy"]
+[ext_resource type="Script" uid="uid://b2q8byklk1blw" path="res://scripts/custom_resources/blog_post_res.gd" id="4_hinck"]
+[ext_resource type="Script" uid="uid://draxgf5nhsd6n" path="res://scripts/custom_resources/info_res.gd" id="4_q5byu"]
+[ext_resource type="PackedScene" uid="uid://cb3pamrfmfk17" path="res://scenes/info_entry.tscn" id="6_vsyf1"]
+[ext_resource type="PackedScene" uid="uid://bdx2k0jk0wj1x" path="res://scenes/blog_info_button.tscn" id="7_ou381"]
 [ext_resource type="StyleBox" uid="uid://cm15eel8g2amy" path="res://assets/styleboxes/entry_hover_style_box_flat.tres" id="7_vsyf1"]
 [ext_resource type="StyleBox" uid="uid://6fsycgg7rgdq" path="res://assets/styleboxes/entry_press_style_box_flat.tres" id="8_3oy0g"]
+[ext_resource type="PackedScene" uid="uid://hq12nkfnybko" path="res://scenes/blog_post_entry.tscn" id="8_b43q5"]
+[ext_resource type="StyleBox" uid="uid://jo7o70j7wbfl" path="res://assets/styleboxes/post_unpublished_style_box_flat.tres" id="9_7ti0s"]
+[ext_resource type="StyleBox" uid="uid://bwxvcitqv77od" path="res://assets/styleboxes/post_published_style_box_flat.tres" id="10_ou381"]
 
 [sub_resource type="Resource" id="Resource_2cevy"]
 script = ExtResource("2_0ebsy")
@@ -15,7 +22,7 @@ email_from = "sender 1"
 email_to = "receiver 1"
 email_body = "Hi this is email 1
 This is a new line"
-sent = true
+sent_index = 1
 read = true
 
 [sub_resource type="Resource" id="Resource_q5byu"]
@@ -26,12 +33,13 @@ email_from = "sender 2"
 email_to = "receiver 2"
 email_body = "Hi this is email 2
 This is a new line"
-sent = true
+sent_index = 0
 
 [sub_resource type="Resource" id="Resource_vsyf1"]
 script = ExtResource("3_2cevy")
 id = 0
 search_result_keywords = Array[String](["test"])
+discoverable_infos = Array[int]([2])
 search_result_text = "Result 1
 
 New line!"
@@ -48,6 +56,31 @@ id = 2
 search_result_keywords = Array[String](["hi"])
 search_result_text = "hello"
 
+[sub_resource type="Resource" id="Resource_n02c0"]
+script = ExtResource("4_hinck")
+id = 0
+post_title = "Test Blog"
+post_blurb = "You did it!"
+post_required_infos = Array[int]([0])
+unlocked_index = 0
+
+[sub_resource type="Resource" id="Resource_ou381"]
+script = ExtResource("4_q5byu")
+id = 0
+info_blurb = "The console was originallyplanned to release in 1997."
+discovered_index = 1
+
+[sub_resource type="Resource" id="Resource_hinck"]
+script = ExtResource("4_q5byu")
+id = 1
+info_blurb = "Blurb 2"
+discovered_index = 0
+
+[sub_resource type="Resource" id="Resource_b43q5"]
+script = ExtResource("4_q5byu")
+id = 2
+info_blurb = "Blurb 3"
+
 [node name="GameState" type="Node" unique_id=1718591218]
 script = ExtResource("1_321hb")
 app_names = Dictionary[int, String]({
@@ -58,9 +91,16 @@ app_names = Dictionary[int, String]({
 })
 emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_2cevy"), SubResource("Resource_q5byu")])
 search_results = Array[ExtResource("3_2cevy")]([SubResource("Resource_vsyf1"), SubResource("Resource_3oy0g"), SubResource("Resource_7ti0s")])
+blog_posts = Array[ExtResource("4_hinck")]([SubResource("Resource_n02c0")])
+infos = Array[ExtResource("4_q5byu")]([SubResource("Resource_ou381"), SubResource("Resource_hinck"), SubResource("Resource_b43q5")])
 no_results_message = "No results found.
 
 Did you misspell something?"
 inbox_entry_scene = ExtResource("2_jy5aj")
+info_entry_scene = ExtResource("6_vsyf1")
+blog_post_entry_scene = ExtResource("8_b43q5")
+info_button_scene = ExtResource("7_ou381")
 entry_hover_style_box = ExtResource("7_vsyf1")
 entry_press_style_box = ExtResource("8_3oy0g")
+unpublished_post_style_box = ExtResource("9_7ti0s")
+published_post_style_box = ExtResource("10_ou381")

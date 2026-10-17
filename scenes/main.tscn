@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://invlqc442atl" path="res://scripts/main.gd" id="1_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://dkoh0b4nwi0fy" path="res://assets/windows_xp_16.jpg" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://dd7pkvvr8ro08" path="res://scenes/apps/custom_window.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bll0sphthnqlo" path="res://scenes/apps/email_app.tscn" id="3_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dq5e0jp5my7vu" path="res://scenes/apps/internet_app.tscn" id="4_tipki"]
+[ext_resource type="PackedScene" uid="uid://d30b73po6febn" path="res://scenes/apps/blog_app.tscn" id="5_85g3d"]
 [ext_resource type="Script" uid="uid://cv0np0gy7ab7n" path="res://scripts/task_bar.gd" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://x7hvpl77l40i" path="res://scripts/utility/custom_tweener.gd" id="8_tipki"]
 [ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="9_85g3d"]
@@ -104,10 +104,8 @@ layout_mode = 1
 [node name="InternetWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=940131225 instance=ExtResource("4_tipki")]
 layout_mode = 1
 
-[node name="BlogWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=512429714 instance=ExtResource("2_sugp2")]
-visible = false
+[node name="BlogWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=884958558 instance=ExtResource("5_85g3d")]
 layout_mode = 1
-own_app = 2
 
 [node name="PortalWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=761592394 instance=ExtResource("4_tipki")]
 layout_mode = 1

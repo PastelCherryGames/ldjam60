@@ -31,7 +31,7 @@ func _activate_portal_button() -> void:
 
 func _check_if_show_email_alert() -> void:
 	for email in GameState.emails:
-		if email.sent && !email.read:
+		if email.sent_index > -1 && !email.read:
 			alert_icon.show()
 			return
 	alert_icon.hide()

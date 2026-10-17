@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://cb3pamrfmfk17"]
+
+[ext_resource type="Script" uid="uid://bimmyte2b1uyy" path="res://scripts/info_entry.gd" id="1_3pwjq"]
+[ext_resource type="StyleBox" uid="uid://cm15eel8g2amy" path="res://assets/styleboxes/entry_hover_style_box_flat.tres" id="2_jef04"]
+[ext_resource type="Script" uid="uid://x7hvpl77l40i" path="res://scripts/utility/custom_tweener.gd" id="3_ff0ld"]
+[ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="4_nasuy"]
+[ext_resource type="Texture2D" uid="uid://bimrq7mw83cy5" path="res://icon.svg" id="5_tgu2l"]
+[ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="6_85g46"]
+[ext_resource type="LabelSettings" uid="uid://j72oxc0ukosw" path="res://assets/font_settings/title.tres" id="7_3jacr"]
+
+[sub_resource type="Resource" id="Resource_ya4ey"]
+script = ExtResource("4_nasuy")
+nodepath = NodePath("../HoverPanel")
+property = "modulate"
+values = {
+false: Color(1, 1, 1, 0),
+true: Color(1, 1, 1, 1)
+}
+metadata/_custom_type_script = "uid://cxdonqanebxtv"
+
+[node name="InfoEntry" type="MarginContainer" unique_id=2040673905]
+script = ExtResource("1_3pwjq")
+
+[node name="HoverPanel" type="Panel" parent="." unique_id=1109436330]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_jef04")
+
+[node name="OwnButton" type="TextureButton" parent="." unique_id=1793089396]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+script = ExtResource("3_ff0ld")
+properties_to_tween = Array[ExtResource("4_nasuy")]([SubResource("Resource_ya4ey")])
+focus_time = 0.0
+unfocus_time = 0.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=415628563]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1398733810]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="IconAnchor" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1333941795]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="EmailIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/IconAnchor" unique_id=1009445223]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 30.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5_tgu2l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AlertIcon" parent="MarginContainer/HBoxContainer/IconAnchor" unique_id=1456460316 instance=ExtResource("6_85g46")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 25.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1055822357]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="BlurbLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1065849031]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Info Blurb"
+label_settings = ExtResource("7_3jacr")
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1380266546]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="LinkHBox" type="HFlowContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/MarginContainer" unique_id=787298180]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 12
+
+[node name="LinkButton" type="LinkButton" parent="MarginContainer/HBoxContainer/VBoxContainer/MarginContainer/LinkHBox" unique_id=127923268]
+layout_mode = 2

@@ -9,6 +9,7 @@ class_name InternetApp
 @onready var search_result_label: RichTextLabel = %SearchResultLabel
 @onready var notify_vbox: Container = %NotifyVBox
 @onready var notify_info: Control = %NotifyInfoEntry
+@onready var notify_source: Control = %NotifySourceEntry
 @onready var notify_visited: Control = %NotifyVisitedEntry
 
 var no_results := false
@@ -17,6 +18,7 @@ var no_results := false
 func _ready() -> void:
 	super()
 	notify_info.hide()
+	notify_source.hide()
 	notify_visited.hide()
 	search_result_label.text = ''
 	search_line_edit.max_length = GameState.get_longest_search_keyword_length(E.App.INTERNET)
@@ -34,6 +36,7 @@ func toggle_window(should_show: bool) -> void:
 func _search_internet(search_text: String) -> void:
 	no_results = false
 	notify_info.hide()
+	notify_source.hide()
 	notify_visited.hide()
 	var database: Array[SearchResultRes] = GameState.search_results
 	var database_history: Array[int] = GameState.search_history
@@ -59,7 +62,16 @@ func _search_internet(search_text: String) -> void:
 			if !search_result.visited:
 				search_result.visited = true
 				## check if info discovered, show notification
-				#notify_info.show()
+				for info_id in search_result.discoverable_infos:
+					var info: InfoRes = GameState.get_entry(GameState.infos, info_id)
+					if info.discovered_index < 0:
+						info.discovered_index = GameState.get_found_index(GameState.infos, 'discovered_index')
+						notify_info.show()
+					else:
+						pass
+						## if source already discovered, but doesn't have source, add source
+						## and show notification
+						#notify_source.show()
 				GameState.search_result_discovered.emit(search_result.id)
 			else:
 				notify_visited.show()
@@ -107,6 +119,7 @@ func _move_through_history(direction: int) -> void:
 	await get_tree().create_timer(GameState.UI_PAUSE_LENGTH).timeout
 	search_result_label.text = history_result.search_result_text
 	notify_info.hide()
+	notify_source.hide()
 	notify_visited.show()
 
 

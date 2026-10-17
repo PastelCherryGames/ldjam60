@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bdx2k0jk0wj1x"]
+
+[ext_resource type="Script" uid="uid://dh0vvl5yayan4" path="res://scripts/blog_info_button.gd" id="1_t766f"]
+
+[node name="BlogInfoButton" type="Button" unique_id=1686291486]
+custom_minimum_size = Vector2(200, 28)
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"SmallButtonEntryUnfilled"
+alignment = 0
+autowrap_mode = 3
+script = ExtResource("1_t766f")
