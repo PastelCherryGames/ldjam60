@@ -35,7 +35,6 @@ email_to = "receiver 2"
 email_body = "Hi this is email 2
 This is a new line"
 email_num_blog_posts = 1
-trigger_portal = null
 
 [sub_resource type="Resource" id="Resource_vsyf1"]
 script = ExtResource("3_2cevy")
@@ -98,6 +97,7 @@ infos = Array[ExtResource("4_q5byu")]([SubResource("Resource_ou381"), SubResourc
 no_results_message = "No results found.
 
 Did you misspell something?"
+portal_no_results_message = "ERROR 404 FILE DOES NOT EXIST"
 inbox_entry_scene = ExtResource("2_jy5aj")
 info_entry_scene = ExtResource("6_vsyf1")
 blog_post_entry_scene = ExtResource("8_b43q5")
