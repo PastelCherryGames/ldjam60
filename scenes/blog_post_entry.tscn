@@ -67,6 +67,7 @@ label_settings = ExtResource("5_svca4")
 
 [node name="BlurbLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=299982715]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_type_variation = &"SmallRichTextLabel"
 text = "This is a blurb for a blog post"

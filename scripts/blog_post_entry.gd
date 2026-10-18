@@ -3,7 +3,7 @@ class_name BlogPostEntry
 
 
 @onready var title_label: Label = %TitleLabel
-@onready var blurb_label: RichTextLabel = %BlurbLabel
+#@onready var blurb_label: RichTextLabel = %BlurbLabel
 @onready var infos_vbox: Container = %InfosVBox
 @onready var publish_button: BaseButton = %PublishButton
 
@@ -12,7 +12,7 @@ var own_post_id: int = -1
 
 func _check_refs() -> void:
 	if title_label == null: title_label = %TitleLabel
-	if blurb_label == null: blurb_label = %BlurbLabel
+	#if blurb_label == null: blurb_label = %BlurbLabel
 	if infos_vbox == null: infos_vbox = %InfosVBox
 	if publish_button == null: publish_button = %PublishButton
 
@@ -21,8 +21,8 @@ func set_up_blog_post(post: BlogPostRes) -> void:
 	_check_refs()
 	own_post_id = post.id
 	title_label.text = post.post_title
-	blurb_label.hide()
-	blurb_label.text = post.post_blurb
+	#blurb_label.hide()
+	#blurb_label.text = post.post_blurb
 	for i in range(post.post_required_infos.size()):
 		var info_button: BlogInfoButton = GameState.info_button_scene.instantiate()
 		info_button.assigned_info_id_updated.connect(_update_assigned_infos)
@@ -60,7 +60,7 @@ func _check_if_can_publish_post() -> void:
 func _publish_post(emit: bool) -> void:
 	_check_refs()
 	self.add_theme_stylebox_override('panel', GameState.published_post_style_box)
-	blurb_label.show()
+	#blurb_label.show()
 	for info in infos_vbox.get_children():
 		info.disabled = true
 	publish_button.disabled = true
