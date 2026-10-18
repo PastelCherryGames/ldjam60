@@ -231,6 +231,24 @@ search_result_text = "Game Design Now is a popular quarterly magazine about how 
 
 You find an archive of digitized copies of the magazine, and open the issue published right before the Cybersaga was canceled. It's mostly filled with articles about games releasing in 2001 and 2002, but you notice an Eidolon advertisement. The Cybersaga is partially covered by large, blocky text, but you can see an unusual jagged purple crystal encased in a glass dome on the top of the console."
 
+[sub_resource type="Resource" id="Resource_87425"]
+script = ExtResource("3_b43q5")
+id = 17
+search_result_keywords = Array[String](["tech informer", "the tech informer"])
+discoverable_infos = Array[int]([9])
+search_result_text = "Although the Tech Informer is primarily a magazine, it also offers a subscription to read newer issues on its website. Thankfully, the older articles are free to view.
+
+After browsing for some time, you discover an article tracking how different game companies handled the emerging market of 3D games. It includes a short section about Eidolon. According to the Informers inside source, development on the Cybersaga began in 1998, spurred on by the success of the Game and Go and the release of popular 3D console games from Eidolon's competitors."
+
+[sub_resource type="Resource" id="Resource_xw75f"]
+script = ExtResource("3_b43q5")
+id = 18
+search_result_keywords = Array[String](["leadership in games"])
+discoverable_infos = Array[int]([10])
+search_result_text = "According to their website, Leadership in Games is an organization dedicated to promoting and recognizing excellence in the game development industry. Every year, they hold a conference featuring talks, workshops, and an awards ceremony.
+
+The website also contains a list of award recipients with a description of why each one was awarded. You scroll down to find Dave Brunswick's entry. He was given an award during the 1999 conference for his work as a co-lead on the Cybersaga design team, even though he had no background in hardware development."
+
 [sub_resource type="Resource" id="Resource_613m7"]
 script = ExtResource("3_b43q5")
 id = 0
@@ -457,7 +475,7 @@ app_names = Dictionary[int, String]({
 3: "Portal"
 })
 emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_ou381"), SubResource("Resource_hinck"), SubResource("Resource_b43q5"), SubResource("Resource_wtwmm"), SubResource("Resource_n02c0")])
-search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l"), SubResource("Resource_mhmfr"), SubResource("Resource_td4en"), SubResource("Resource_00i5b"), SubResource("Resource_uu0e1"), SubResource("Resource_t1626"), SubResource("Resource_186ac"), SubResource("Resource_eetof"), SubResource("Resource_0iufh"), SubResource("Resource_0tqo2"), SubResource("Resource_n5vws"), SubResource("Resource_vul4s"), SubResource("Resource_cwdit"), SubResource("Resource_d1g2n")])
+search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l"), SubResource("Resource_mhmfr"), SubResource("Resource_td4en"), SubResource("Resource_00i5b"), SubResource("Resource_uu0e1"), SubResource("Resource_t1626"), SubResource("Resource_186ac"), SubResource("Resource_eetof"), SubResource("Resource_0iufh"), SubResource("Resource_0tqo2"), SubResource("Resource_n5vws"), SubResource("Resource_vul4s"), SubResource("Resource_cwdit"), SubResource("Resource_d1g2n"), SubResource("Resource_87425"), SubResource("Resource_xw75f")])
 portal_search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_613m7"), SubResource("Resource_1cg44"), SubResource("Resource_p8q4l"), SubResource("Resource_iwy35"), SubResource("Resource_xcm6g"), SubResource("Resource_8bawm"), SubResource("Resource_8ot7y")])
 blog_posts = Array[ExtResource("4_hinck")]([SubResource("Resource_wshnm"), SubResource("Resource_068d4"), SubResource("Resource_rjw16"), SubResource("Resource_730wy"), SubResource("Resource_opsgy"), SubResource("Resource_dmh8s"), SubResource("Resource_pkm2a")])
 infos = Array[ExtResource("4_b43q5")]([SubResource("Resource_b2kmk"), SubResource("Resource_vpphb"), SubResource("Resource_yys8v"), SubResource("Resource_2ihq6"), SubResource("Resource_b3g5w"), SubResource("Resource_dwn85"), SubResource("Resource_ht8ty"), SubResource("Resource_8uswj"), SubResource("Resource_wypqq"), SubResource("Resource_qinfc"), SubResource("Resource_xxciq"), SubResource("Resource_8h2gw"), SubResource("Resource_el84a"), SubResource("Resource_vcwvp"), SubResource("Resource_xkk4w"), SubResource("Resource_kq0p0"), SubResource("Resource_a2sex"), SubResource("Resource_w7tor")])
