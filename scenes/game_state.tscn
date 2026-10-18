@@ -23,7 +23,7 @@ email_body = "Hey there!
 
 I've been reading your blog for a while, and I love your deep dives into retro consoles. I remember playing on the Game and Go as a kid, so it was fun to see you mention it in your post last week!
 
-Anyways,speaking of Eidolon consoles, do you have any information about the Cybersaga? I heard from a buddy of mine that it was some crazy new console that never got released before the company went under. I've been having trouble finding anything about it online other than rumors, so I thought I'd reach out and see if you know more.
+Anyways, speaking of Eidolon consoles, do you have any information about the Cybersaga? I heard from a buddy of mine that it was some crazy new console that never got released before the company went under. I've been having trouble finding anything about it online other than rumors, so I thought I'd reach out and see if you know more.
 
 Maybe you could even write a blog post about it!"
 sent_index = 0
@@ -31,6 +31,7 @@ sent_index = 0
 [sub_resource type="Resource" id="Resource_hinck"]
 script = ExtResource("2_0ebsy")
 id = 1
+email_subject = "Email 2"
 email_body = "Email triggers 2 & 4"
 email_num_blog_posts = 1
 
@@ -53,7 +54,7 @@ search_result_keywords = Array[String](["cybersaga"])
 discoverable_infos = Array[int]([0])
 search_result_text = "Your search yields little information. The Cybersaga, often abbreviated as CS on retro gaming forums, was a video game console rumored to have been developed by a company called Eidolon.
 
-The company sounds familiar, but you've never heard of the Cybersaga before today. Maybe there's some more helpful information in the email you received?"
+The company sounds familiar, but you've never heard of the Cybersaga before today. Maybe there's some other terms you could search for in the email you received?"
 
 [sub_resource type="Resource" id="Resource_38bpc"]
 script = ExtResource("3_b43q5")
@@ -70,7 +71,7 @@ search_result_keywords = Array[String](["heidi schuman"])
 discoverable_infos = Array[int]([1])
 search_result_text = "Heidi Schuman was Eidolon's head of hardware development from 1993 until their abrupt closing in 2002. Her last public appearance with the company was a press conference at ConsoleCon about the upcoming Cybersaga release.
 
-You find a transcript of her talk, but Heidi stayed annoyingly vague throughout the entire thing. The most concrete thing she said was that the Cybersaga \"promised a revolutionary new gaming experience.\""
+You find a transcript of her talk, but Heidi stayed annoyingly vague throughout the entire presentation. The most concrete thing she said was that the Cybersaga \"promised a revolutionary new gaming experience.\""
 
 [sub_resource type="Resource" id="Resource_byh4l"]
 script = ExtResource("3_b43q5")
@@ -204,55 +205,46 @@ email_prereqs = Array[int]([3])
 script = ExtResource("4_b43q5")
 id = 0
 info_blurb = "The Cybersaga (abbreviated as CS) was a video game console rumored to have been developed by Eidolon."
-used = null
 
 [sub_resource type="Resource" id="Resource_vpphb"]
 script = ExtResource("4_b43q5")
 id = 1
 info_blurb = "The CS \"promised an revolutionary new gaming experience\"."
-used = null
 
 [sub_resource type="Resource" id="Resource_yys8v"]
 script = ExtResource("4_b43q5")
 id = 2
 info_blurb = "The CS was planned to be released for the 2001 holiday season, but never made it to store shelves."
-used = null
 
 [sub_resource type="Resource" id="Resource_2ihq6"]
 script = ExtResource("4_b43q5")
 id = 3
 info_blurb = "Eidolon was one of the biggest video game companies in the 1990s."
-used = null
 
 [sub_resource type="Resource" id="Resource_b3g5w"]
 script = ExtResource("4_b43q5")
 id = 4
 info_blurb = "Eidolon was famous for hits such as Fortress Defender 2, Crazy Pineapple Guy, and Mystery of the Golden Mountains."
-used = null
 
 [sub_resource type="Resource" id="Resource_dwn85"]
 script = ExtResource("4_b43q5")
 id = 5
 info_blurb = "Eidolon's CEO during the Cybersaga's development was Dave Brunswick."
-used = null
 
 [sub_resource type="Resource" id="Resource_ht8ty"]
 script = ExtResource("4_b43q5")
 id = 6
 info_blurb = "The Cybersaga was made to run Eidolon's first in-house 3D games."
-used = null
 
 [sub_resource type="Resource" id="Resource_8uswj"]
 script = ExtResource("4_b43q5")
 id = 7
 info_blurb = "The first and only game announced for the CS was KNIGHT, an action adventure title."
-used = null
 
 [sub_resource type="Resource" id="Resource_wypqq"]
 script = ExtResource("4_b43q5")
 id = 8
 info_blurb = "Dave Brunswick claimed that Cybersaga games would offer an immersive experience \"almost indistinguishable from reality.\""
-used = null
 
 [node name="GameState" type="Node" unique_id=1718591218]
 script = ExtResource("1_321hb")

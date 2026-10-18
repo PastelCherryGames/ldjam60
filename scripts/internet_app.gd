@@ -22,8 +22,8 @@ func _ready() -> void:
 	notify_visited.hide()
 	search_result_label.text = ''
 	search_line_edit.max_length = GameState.get_longest_search_keyword_length(E.App.INTERNET)
-	search_line_edit.text_submitted.connect(_search_internet)
-	search_button.pressed.connect(_search_internet.bind(search_line_edit.text))
+	search_line_edit.text_submitted.connect(_search_internet.unbind(1))
+	search_button.pressed.connect(_search_internet)
 	back_button.pressed.connect(_move_through_history.bind(-1))
 	forward_button.pressed.connect(_move_through_history.bind(1))
 	_update_back_forward_buttons()
@@ -33,7 +33,8 @@ func toggle_window(should_show: bool) -> void:
 	super(should_show)
 
 
-func _search_internet(search_text: String) -> void:
+func _search_internet() -> void:
+	var search_text: String = search_line_edit.text
 	no_results = false
 	notify_info.hide()
 	notify_source.hide()

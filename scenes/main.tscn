@@ -172,14 +172,6 @@ offset_top = 0.0
 offset_right = 23.0
 offset_bottom = 23.0
 
-[node name="InternetButton" type="Button" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=151708808]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_default_cursor_shape = 2
-text = "Internet"
-
 [node name="BlogButton" type="Button" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1636285795]
 unique_name_in_owner = true
 layout_mode = 2
@@ -187,6 +179,14 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 text = "Blog"
+
+[node name="InternetButton" type="Button" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=151708808]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+text = "Internet"
 
 [node name="PortalButton" type="Button" parent="MarginContainer/VBoxContainer/TaskBar/PanelContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1500894864]
 unique_name_in_owner = true
