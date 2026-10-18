@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dq5e0jp5my7vu" path="res://scenes/apps/internet_app.tscn" id="4_tipki"]
 [ext_resource type="PackedScene" uid="uid://d30b73po6febn" path="res://scenes/apps/blog_app.tscn" id="5_85g3d"]
 [ext_resource type="Script" uid="uid://cv0np0gy7ab7n" path="res://scripts/task_bar.gd" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dvse0n3t8ic85" path="res://scenes/apps/portal_app.tscn" id="6_choun"]
 [ext_resource type="Script" uid="uid://x7hvpl77l40i" path="res://scripts/utility/custom_tweener.gd" id="8_tipki"]
 [ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="11_ya4ey"]
@@ -78,6 +79,7 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="BGVignette" type="TextureRect" parent="MarginContainer" unique_id=97012936]
+visible = false
 layout_mode = 2
 texture = SubResource("GradientTexture2D_o5qli")
 expand_mode = 1
@@ -107,9 +109,8 @@ layout_mode = 1
 [node name="BlogWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=884958558 instance=ExtResource("5_85g3d")]
 layout_mode = 1
 
-[node name="PortalWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=761592394 instance=ExtResource("4_tipki")]
+[node name="PortalWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=404913768 instance=ExtResource("6_choun")]
 layout_mode = 1
-own_app = 3
 
 [node name="TaskBar" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=519065725]
 unique_name_in_owner = true
@@ -196,6 +197,7 @@ text = "(Company) Portal"
 
 [node name="StartScreen" type="ColorRect" parent="." unique_id=201318596 node_paths=PackedStringArray("trigger_button")]
 unique_name_in_owner = true
+visible = false
 z_index = 200
 layout_mode = 1
 anchors_preset = 15

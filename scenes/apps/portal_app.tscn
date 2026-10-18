@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dvse0n3t8ic85"]
+
+[ext_resource type="PackedScene" uid="uid://dq5e0jp5my7vu" path="res://scenes/apps/internet_app.tscn" id="1_sqtlj"]
+[ext_resource type="LabelSettings" uid="uid://cj3avft2pxfwp" path="res://assets/font_settings/heading_portal.tres" id="2_dv8is"]
+[ext_resource type="Theme" uid="uid://w4j74ccov8ij" path="res://assets/themes/dark_theme.tres" id="2_vmlxg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqtlj"]
+bg_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.55, 0.55, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmlxg"]
+bg_color = Color(0.75, 1, 0.8125, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.19839999, 0.64, 0.3088, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 2)
+
+[node name="PortalWindow" unique_id=122213665 instance=ExtResource("1_sqtlj")]
+theme = ExtResource("2_vmlxg")
+own_app = 3
+
+[node name="PanelContainer" parent="PanelContainer/PanelContainer/MarginContainer" parent_id_path=PackedInt32Array(747586950) index="0" unique_id=1198304804]
+theme_override_styles/panel = SubResource("StyleBoxFlat_sqtlj")
+
+[node name="InternetLabel" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1645606800) index="0" unique_id=655535070]
+text = "Company Portal
+Unauthorized Use Prohibited"
+label_settings = ExtResource("2_dv8is")
+
+[node name="NotifyInfoEntry" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox" parent_id_path=PackedInt32Array(2071840509) index="0" unique_id=213704604]
+visible = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_vmlxg")
+
+[editable path="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifyInfoEntry"]
+[editable path="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifySourceEntry"]
+[editable path="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifyVisitedEntry"]

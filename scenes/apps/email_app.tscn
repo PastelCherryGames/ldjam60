@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dd7pkvvr8ro08" path="res://scenes/apps/custom_window.tscn" id="1_glgmh"]
 [ext_resource type="Script" uid="uid://u8jrdquj7tbe" path="res://scripts/email_app.gd" id="2_auxxb"]
-[ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading1.tres" id="2_wdckx"]
+[ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading.tres" id="2_wdckx"]
 [ext_resource type="LabelSettings" uid="uid://tk4p3dwd1w76" path="res://assets/font_settings/subtitle.tres" id="3_auxxb"]
 
 [node name="EmailWindow" unique_id=122213665 instance=ExtResource("1_glgmh")]

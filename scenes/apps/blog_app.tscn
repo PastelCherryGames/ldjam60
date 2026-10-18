@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dd7pkvvr8ro08" path="res://scenes/apps/custom_window.tscn" id="1_2asar"]
 [ext_resource type="Script" uid="uid://cpfpsd3thufny" path="res://scripts/blog_app.gd" id="2_obpyt"]
-[ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading1.tres" id="3_ndd4w"]
+[ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading.tres" id="3_ndd4w"]
 
 [node name="BlogWindow" unique_id=122213665 instance=ExtResource("1_2asar")]
 script = ExtResource("2_obpyt")
