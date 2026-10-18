@@ -58,4 +58,6 @@ func _check_if_change_blog_label() -> void:
 	var all_posts_published := true
 	for post in GameState.blog_posts:
 		if post.published_index < 0: all_posts_published = false
-	if all_posts_published: more_blogs_label.text = 'Your series on the Eidolon Cybersaga is complete.'
+	if all_posts_published:
+		more_blogs_label.text = 'Your series on the Eidolon Cybersaga is complete.'
+		empty_label.text = ''

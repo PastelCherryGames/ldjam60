@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cpaxcy3wve4ci"]
 
 [ext_resource type="Script" uid="uid://invlqc442atl" path="res://scripts/main.gd" id="1_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://s7jvn6oixl18" path="res://assets/IMG_20261018_170731572.jpg" id="2_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://bll0sphthnqlo" path="res://scenes/apps/email_app.tscn" id="3_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dq5e0jp5my7vu" path="res://scenes/apps/internet_app.tscn" id="4_tipki"]
 [ext_resource type="PackedScene" uid="uid://d30b73po6febn" path="res://scenes/apps/blog_app.tscn" id="5_85g3d"]
@@ -10,13 +11,6 @@
 [ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="9_85g3d"]
 [ext_resource type="Theme" uid="uid://w4j74ccov8ij" path="res://assets/themes/dark_theme.tres" id="9_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="11_ya4ey"]
-
-[sub_resource type="Gradient" id="Gradient_choun"]
-colors = PackedColorArray(0.100000024, 0.44499987, 1, 1, 0.32683337, 0.74, 0.24419999, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ya4ey"]
-gradient = SubResource("Gradient_choun")
-fill_to = Vector2(0, 1)
 
 [sub_resource type="Gradient" id="Gradient_sgp6g"]
 offsets = PackedFloat32Array(0.7098214, 1)
@@ -81,12 +75,11 @@ grow_vertical = 2
 
 [node name="BG" type="TextureRect" parent="MarginContainer" unique_id=217996014]
 layout_mode = 2
-texture = SubResource("GradientTexture2D_ya4ey")
+texture = ExtResource("2_ya4ey")
 expand_mode = 1
 stretch_mode = 6
 
 [node name="BGVignette" type="TextureRect" parent="MarginContainer" unique_id=97012936]
-visible = false
 layout_mode = 2
 texture = SubResource("GradientTexture2D_o5qli")
 expand_mode = 1
