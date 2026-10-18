@@ -31,21 +31,30 @@ sent_index = 0
 [sub_resource type="Resource" id="Resource_hinck"]
 script = ExtResource("2_0ebsy")
 id = 1
-email_subject = "Email 2"
-email_body = "Email triggers 2 & 4"
+email_subject = "Liked your post"
+email_from = "A New Reader"
+email_body = "I just read your blog post on the Eidolon Cybersaga, and I wanted to let you know how much I enjoyed it. It's the first post of yours I've read, but I think I'll be back, especially if you write more about the CS. Always fun to find another person interested in the tech behind games.
+
+I've always been curious about what kinds of games they were planning to make for the CS. It sounded so different from anything Eidolon had made before, but Eidolon was always a bit of a strange company, anyways. Especially their CEO.
+
+Looking forward to reading your next post."
 email_num_blog_posts = 1
 
 [sub_resource type="Resource" id="Resource_b43q5"]
 script = ExtResource("2_0ebsy")
 id = 2
-email_body = "Triggers 6 & 9"
+email_subject = "Potential source for your research"
+email_from = "A Returning Reader"
+email_body = "I read your latest post about the CS, and it reminded me of another blogger I've seen mention it. I think he used to be a playtester for Eidolon or something. Try searching for Ryan Marshall, his website should come up.
+
+Hope this gives you more content for the blog."
 email_num_blog_posts = 3
 
 [sub_resource type="Resource" id="Resource_n02c0"]
 script = ExtResource("2_0ebsy")
 id = 3
 email_body = "Triggers 10"
-email_num_blog_posts = 9
+email_num_blog_posts = 6
 
 [sub_resource type="Resource" id="Resource_72iso"]
 script = ExtResource("3_b43q5")
@@ -131,7 +140,7 @@ search_result_keywords = Array[String](["consolecon"])
 discoverable_infos = Array[int]([8])
 search_result_text = "ConsoleCon is an annual video game convention focusing on console games and hardware. The website contains archives of various talks and exhibits from previous years, and a thorough search yields more information about the Eidolon press conference about the Cybersaga.
 
-Alongside Heidi Schuman, Dave Brunswick spoke briefly about how Cybersaga games would offer an immersive experience \"almost indistinguishable from reality.\""
+Alongside Heidi Schuman, Dave Brunswick spoke briefly about how Cybersaga games would offer an immersive experience \"almost indistinguishable from reality.\" Despite the focus on the upcoming console, few details were shared about its capabilities or its development."
 
 [sub_resource type="Resource" id="Resource_186ac"]
 script = ExtResource("3_b43q5")
@@ -141,6 +150,15 @@ discoverable_infos = Array[int]([5])
 search_result_text = "Searching Dave Brunswick's name brings up dated headshots of a balding, middle-aged man with a cheesy grin. Surprisingly, Eidolon's defunct website still has a reachable profile page for him. He was the CEO at the time of the bankruptcy.
 
 You also find several older articles praising his leadership skills and involvement in the creative aspects of Eidolon. It seems that before he became an executive, he had always wanted to make video games. You're unable to find any information about what he's up to these days."
+
+[sub_resource type="Resource" id="Resource_eetof"]
+script = ExtResource("3_b43q5")
+id = 10
+search_result_keywords = Array[String](["anxious squirrel", "anxious squirrel games"])
+discoverable_infos = Array[int]([9])
+search_result_text = "Cofounded by brother and sister duo Chris and Janet Parker, Anxious Squirrel Games is a medium-sized game studio with a solid track record of atmospheric action adventure titles. After releasing their breakout hit KNIGHT, the studio went on to create multiple highly acclaimed games and is currently working on a spiritual successor to KNIGHT.
+
+In an interview from 2004, Janet described the dire straits the studio was in after the canceled release of the Cybersaga. \"Here we had a game we really believed in, with close to two years of development time invested, and Eidolon just goes radio silent. I mean, we couldn't get anyone to tell us what was going on with the CS. I'm just happy that we were able to recover and that fans are finally able to play KNIGHT.\""
 
 [sub_resource type="Resource" id="Resource_wshnm"]
 script = ExtResource("4_hinck")
@@ -167,33 +185,19 @@ email_prereqs = Array[int]([1])
 script = ExtResource("4_hinck")
 id = 3
 post_title = "What is known about the Cybersaga's development?"
+info_prereqs = Array[int]([8])
 
 [sub_resource type="Resource" id="Resource_opsgy"]
 script = ExtResource("4_hinck")
 id = 4
 post_title = "Why was the Cybersaga never released?"
-
-[sub_resource type="Resource" id="Resource_eetof"]
-script = ExtResource("4_hinck")
-id = 5
-post_title = "What did the Cybersaga's early playtesters think?"
-email_prereqs = Array[int]([2])
-
-[sub_resource type="Resource" id="Resource_qinfc"]
-script = ExtResource("4_hinck")
-id = 6
-post_title = "What happened after the Cybersaga's failed launch?"
-email_prereqs = Array[int]([2])
+post_required_infos = Array[int]([9])
+info_prereqs = Array[int]([9])
 
 [sub_resource type="Resource" id="Resource_dmh8s"]
 script = ExtResource("4_hinck")
 id = 7
 post_title = "What was the Cybersaga's unique selling point?"
-
-[sub_resource type="Resource" id="Resource_wtwmm"]
-script = ExtResource("4_hinck")
-id = 8
-post_title = "What happened at Eidolon's secret demo party?"
 
 [sub_resource type="Resource" id="Resource_pkm2a"]
 script = ExtResource("4_hinck")
@@ -246,6 +250,11 @@ script = ExtResource("4_b43q5")
 id = 8
 info_blurb = "Dave Brunswick claimed that Cybersaga games would offer an immersive experience \"almost indistinguishable from reality.\""
 
+[sub_resource type="Resource" id="Resource_qinfc"]
+script = ExtResource("4_b43q5")
+id = 9
+info_blurb = "Eidolon hid the reason for canceling the Cybersaga's release, even from close collaborators, and ensured that no information ever found its way to the public internet."
+
 [node name="GameState" type="Node" unique_id=1718591218]
 script = ExtResource("1_321hb")
 app_names = Dictionary[int, String]({
@@ -255,9 +264,9 @@ app_names = Dictionary[int, String]({
 3: "Portal"
 })
 emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_ou381"), SubResource("Resource_hinck"), SubResource("Resource_b43q5"), SubResource("Resource_n02c0")])
-search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l"), SubResource("Resource_mhmfr"), SubResource("Resource_td4en"), SubResource("Resource_00i5b"), SubResource("Resource_uu0e1"), SubResource("Resource_t1626"), SubResource("Resource_186ac")])
-blog_posts = Array[ExtResource("4_hinck")]([SubResource("Resource_wshnm"), SubResource("Resource_068d4"), SubResource("Resource_rjw16"), SubResource("Resource_730wy"), SubResource("Resource_opsgy"), SubResource("Resource_eetof"), SubResource("Resource_qinfc"), SubResource("Resource_dmh8s"), SubResource("Resource_wtwmm"), SubResource("Resource_pkm2a")])
-infos = Array[ExtResource("4_b43q5")]([SubResource("Resource_b2kmk"), SubResource("Resource_vpphb"), SubResource("Resource_yys8v"), SubResource("Resource_2ihq6"), SubResource("Resource_b3g5w"), SubResource("Resource_dwn85"), SubResource("Resource_ht8ty"), SubResource("Resource_8uswj"), SubResource("Resource_wypqq")])
+search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l"), SubResource("Resource_mhmfr"), SubResource("Resource_td4en"), SubResource("Resource_00i5b"), SubResource("Resource_uu0e1"), SubResource("Resource_t1626"), SubResource("Resource_186ac"), SubResource("Resource_eetof")])
+blog_posts = Array[ExtResource("4_hinck")]([SubResource("Resource_wshnm"), SubResource("Resource_068d4"), SubResource("Resource_rjw16"), SubResource("Resource_730wy"), SubResource("Resource_opsgy"), SubResource("Resource_dmh8s"), SubResource("Resource_pkm2a")])
+infos = Array[ExtResource("4_b43q5")]([SubResource("Resource_b2kmk"), SubResource("Resource_vpphb"), SubResource("Resource_yys8v"), SubResource("Resource_2ihq6"), SubResource("Resource_b3g5w"), SubResource("Resource_dwn85"), SubResource("Resource_ht8ty"), SubResource("Resource_8uswj"), SubResource("Resource_wypqq"), SubResource("Resource_qinfc")])
 no_results_message = "No results found.
 
 Did you misspell something?"
