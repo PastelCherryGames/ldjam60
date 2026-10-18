@@ -1,8 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://w4j74ccov8ij"]
 
 [ext_resource type="StyleBox" uid="uid://cns4s42nnqrso" path="res://assets/styleboxes/hseparator_style_box_line.tres" id="2_3xldf"]
-[ext_resource type="StyleBox" uid="uid://dei8j3bu8tgsg" path="res://assets/styleboxes/line_edit_focus_style_box.tres" id="3_iypxx"]
-[ext_resource type="StyleBox" uid="uid://6esyjg8vdose" path="res://assets/styleboxes/line_edit_normal_style_box.tres" id="4_nx574"]
 [ext_resource type="StyleBox" uid="uid://bkpi5rbibnb7u" path="res://assets/styleboxes/vseparator_style_box_line.tres" id="6_byfd2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy3ht"]
@@ -73,6 +71,31 @@ corner_radius_bottom_left = 4
 shadow_color = Color(0, 0, 0, 0.39215687)
 shadow_size = 3
 shadow_offset = Vector2(-1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6yve"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0.55, 0.55, 0.55, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(1, 1, 1, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsr63"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.54901963, 0.54901963, 0.54901963, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_offset = Vector2(-1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wm1n"]
 content_margin_left = 8.0
@@ -366,8 +389,8 @@ LineEdit/colors/caret_color = Color(0.2, 0.2, 0.2, 1)
 LineEdit/colors/clear_button_color = Color(0.2, 0.2, 0.2, 1)
 LineEdit/colors/clear_button_color_pressed = Color(0.2, 0.2, 0.2, 1)
 LineEdit/colors/font_color = Color(0.2, 0.2, 0.2, 1)
-LineEdit/styles/focus = ExtResource("3_iypxx")
-LineEdit/styles/normal = ExtResource("4_nx574")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_l6yve")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_qsr63")
 LinkButton/colors/font_color = Color(0.4, 0.48235294, 0.8509804, 1)
 LinkButton/colors/font_disabled_color = Color(0.4, 0.48235294, 0.8509804, 1)
 LinkButton/colors/font_focus_color = Color(0.14117648, 0.27058825, 0.8392157, 1)

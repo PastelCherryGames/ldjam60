@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="4_yqq31"]
 [ext_resource type="LabelSettings" uid="uid://j72oxc0ukosw" path="res://assets/font_settings/title.tres" id="5_svca4"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_pebr2"]
+font_size = 14
+font_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+
 [node name="BlogPostEntry" type="PanelContainer" unique_id=1114982707]
 theme_override_styles/panel = ExtResource("1_pebr2")
 script = ExtResource("2_ptn6l")
@@ -68,7 +72,15 @@ theme_type_variation = &"SmallRichTextLabel"
 text = "This is a blurb for a blog post"
 fit_content = true
 
-[node name="InfosVBox" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1429834259]
+[node name="InfosContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1457597680]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/InfosContainer" unique_id=179993139]
+layout_mode = 2
+text = "Research"
+label_settings = SubResource("LabelSettings_pebr2")
+
+[node name="InfosVBox" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/InfosContainer" unique_id=1429834259]
 unique_name_in_owner = true
 layout_mode = 2
 

@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://cpfpsd3thufny" path="res://scripts/blog_app.gd" id="2_obpyt"]
 [ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading.tres" id="3_ndd4w"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_lmetc"]
+font_size = 14
+font_color = Color(0.3, 0.3, 0.3, 1)
+
 [node name="BlogWindow" unique_id=122213665 instance=ExtResource("1_2asar")]
 script = ExtResource("2_obpyt")
 own_app = 2
@@ -20,10 +24,20 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/margin_left = 4
 
-[node name="InfosLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/MarginContainer" index="0" unique_id=1051747961]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/MarginContainer" index="0" unique_id=1791643640]
+layout_mode = 2
+
+[node name="InfosLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/MarginContainer/VBoxContainer" index="0" unique_id=1051747961]
 layout_mode = 2
 text = "Research"
 label_settings = ExtResource("3_ndd4w")
+
+[node name="Label" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/MarginContainer/VBoxContainer" index="1" unique_id=30426835]
+visible = false
+layout_mode = 2
+text = "Select a piece of info from this list, then click on a slot to add it to a blog post. Once you have the correct info for a blog post, you can publish it."
+label_settings = SubResource("LabelSettings_lmetc")
+autowrap_mode = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos" index="1" unique_id=577119186]
 layout_mode = 2

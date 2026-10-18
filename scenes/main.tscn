@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dvse0n3t8ic85" path="res://scenes/apps/portal_app.tscn" id="6_choun"]
 [ext_resource type="Script" uid="uid://x7hvpl77l40i" path="res://scripts/utility/custom_tweener.gd" id="8_tipki"]
 [ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="9_85g3d"]
+[ext_resource type="Theme" uid="uid://w4j74ccov8ij" path="res://assets/themes/dark_theme.tres" id="9_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="11_ya4ey"]
 
 [sub_resource type="Gradient" id="Gradient_sgp6g"]
@@ -193,7 +194,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-text = "(Company) Portal"
+theme = ExtResource("9_ya4ey")
+text = "Company Portal"
 
 [node name="StartScreen" type="ColorRect" parent="." unique_id=201318596 node_paths=PackedStringArray("trigger_button")]
 unique_name_in_owner = true
