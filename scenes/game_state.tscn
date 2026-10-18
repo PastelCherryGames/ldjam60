@@ -19,7 +19,7 @@ script = ExtResource("2_0ebsy")
 id = 0
 email_subject = "Have you heard of the Eidolon Cybersaga?"
 email_from = "A Fan of Your Blog"
-email_body = "Hey there!
+email_body = "Hello!
 
 I've been reading your blog for a while, and I love your deep dives into retro consoles. I remember playing on the Game and Go as a kid, so it was fun to see you mention it in your post last week!
 
@@ -31,7 +31,7 @@ sent_index = 0
 [sub_resource type="Resource" id="Resource_hinck"]
 script = ExtResource("2_0ebsy")
 id = 1
-email_subject = "Liked your post"
+email_subject = "Enjoyed your post"
 email_from = "A New Reader"
 email_body = "I just read your blog post on the Eidolon Cybersaga, and I wanted to let you know how much I enjoyed it. It's the first post of yours I've read, but I think I'll be back, especially if you write more about the CS. Always fun to find another person interested in the tech behind games.
 
@@ -50,10 +50,28 @@ email_body = "I read your latest post about the CS, and it reminded me of anothe
 Hope this gives you more content for the blog."
 email_num_blog_posts = 3
 
+[sub_resource type="Resource" id="Resource_wtwmm"]
+script = ExtResource("2_0ebsy")
+id = 4
+email_from = "Ryan Marshall"
+email_body = "A friend sent me your blog post quoting me, and I ended up reading your whole Cybersaga series in one sitting. Super impressive how much you've been able to dig up about the whole situation.
+
+I'm pretty sure my NDA is over since Eidolon is long gone, so I've included my old company login for the portal. Even though the company isn't in business anymore, the portal was still up the last time I checked.
+
+Take a look and see if you find anything interesting. If you search my name in the portal, it'll pull up my company profile, so maybe start there?"
+email_num_blog_posts = 4
+trigger_portal = true
+
 [sub_resource type="Resource" id="Resource_n02c0"]
 script = ExtResource("2_0ebsy")
 id = 3
-email_body = "Triggers 10"
+email_subject = "EIDOLON"
+email_from = "EIDOLON"
+email_body = "If you know what's good for you, you'll quit this investigative journalist nonsense.
+
+Project -5---9-0- was meant to be lost forever.
+
+END MESSAGE"
 email_num_blog_posts = 6
 
 [sub_resource type="Resource" id="Resource_72iso"]
@@ -160,6 +178,101 @@ search_result_text = "Cofounded by brother and sister duo Chris and Janet Parker
 
 In an interview from 2004, Janet described the dire straits the studio was in after the canceled release of the Cybersaga. \"Here we had a game we really believed in, with close to two years of development time invested, and Eidolon just goes radio silent. I mean, we couldn't get anyone to tell us what was going on with the CS. I'm just happy that we were able to recover and that fans are finally able to play KNIGHT.\""
 
+[sub_resource type="Resource" id="Resource_0iufh"]
+script = ExtResource("3_b43q5")
+id = 11
+search_result_keywords = Array[String](["fortress defender", "fortress defender 2"])
+search_result_text = "Fortress Defender was a moderately popular series of strategy games developed by Eidolon.
+
+You don't find anything else relating to your investigation."
+
+[sub_resource type="Resource" id="Resource_0tqo2"]
+script = ExtResource("3_b43q5")
+id = 12
+search_result_keywords = Array[String](["mystery of the golden mountains", "golden mountains"])
+search_result_text = "Mystery of the Golden Mountains was a spooky point-and-click game developed by Eidolon. It still has a small but dedicated fanbase online."
+
+[sub_resource type="Resource" id="Resource_n5vws"]
+script = ExtResource("3_b43q5")
+id = 13
+search_result_keywords = Array[String](["janet parker", "chris parker"])
+search_result_text = "Chris and Janet Parker are the cofounders of Anxious Squirrel Games. They're well respected game designers with a couple of awards for the titles they've released, including one for their first game, KNIGHT.
+
+They are occasional contributors to the Game Design Now magazine."
+
+[sub_resource type="Resource" id="Resource_613m7"]
+script = ExtResource("3_b43q5")
+id = 0
+search_result_keywords = Array[String](["cybersaga"])
+search_result_text = "FOLDER: Cybersaga
+
+The Cybersaga's folder is overflowing with documents, but a design for a poster catches your eye. It shows the Cybersaga with the words \"An immersive new world powered by the Saga Crystal\" underneath it."
+
+[sub_resource type="Resource" id="Resource_1cg44"]
+script = ExtResource("3_b43q5")
+id = 1
+search_result_keywords = Array[String](["dave brunswick"])
+search_result_text = "FOLDER: Dave Brunswick
+POSITION: Chief Executive Officer
+STATUS: Employment terminated
+
+Dave's folder is mostly pictures of his cat posted on the employee chat board. However, the last thing he entered in his profile was a now partially corrupted note reading ---CS---2."
+
+[sub_resource type="Resource" id="Resource_p8q4l"]
+script = ExtResource("3_b43q5")
+id = 2
+search_result_keywords = Array[String](["heidi schuman"])
+search_result_text = "FOLDER: Heidi Schuman
+POSITION: Head of Hardware Development
+STATUS: Employment dissolved upon company bankruptcy
+
+Heidi's folder is hard to decipher with all of the hardware specifications and abbreviations, but a partially corrupted document stands out. You can only make out a few characters of the title: Z-4---7."
+
+[sub_resource type="Resource" id="Resource_iwy35"]
+script = ExtResource("3_b43q5")
+id = 3
+search_result_keywords = Array[String](["ryan marshall"])
+search_result_text = "FOLDER: Ryan Marshal
+POSITION: Junior Playtester
+STATUS: Employment dissolved upon company bankruptcy
+
+Ryan's folder is mostly filled with unimportant information, but you notice an unopened email from 2001 about an Annual Appreciation Day Eidolon was holding for its employees."
+
+[sub_resource type="Resource" id="Resource_xcm6g"]
+script = ExtResource("3_b43q5")
+id = 4
+search_result_keywords = Array[String](["saga crystal"])
+discoverable_infos = Array[int]([16])
+search_result_text = "FILE: Saga Crystal
+
+RESEARCH NOTES: The research and development department has created a material capable of influencing a player's senses to coordinate with gameplay. They're calling this material the Saga Crystal. It works by inducing mild hallucinations in nearby individuals, allowing them to actually see, hear, and smell the virtual world as if they were in it.
+Unfortunately, some less desirable side effects have been observed when the effect's strength fluctuates, including hallicinations persisting after power is removed, and in some cases, psychosis. However, these effects seem to be extremely rare, so continued development is recommended."
+
+[sub_resource type="Resource" id="Resource_8bawm"]
+script = ExtResource("3_b43q5")
+id = 5
+search_result_keywords = Array[String](["annual appreciation event"])
+discoverable_infos = Array[int]([14])
+search_result_text = "FILE: Annual Appreciation Event 2001
+
+INTERNAL MEMO: Do not share this information with anyone outside of Eidolon core leadership. The previously documented issues with the Saga Crystal were amplified by the large number of people at the Annual Appreciation Event demo, resulting in mass psychosis among attendees. Some employees have returned to work still hallucinating, which is greatly decreasing company productivity. Therefore, due to the risk to customer health and the company's image, the Cybersaga release is canceled."
+
+[sub_resource type="Resource" id="Resource_8ot7y"]
+script = ExtResource("3_b43q5")
+id = 6
+search_result_keywords = Array[String](["project z54cs9702", "z54cs9702"])
+discoverable_infos = Array[int]([17])
+search_result_text = "FILE: PROJECT Z54CS9702
+ALSO KNOWN AS Cybersaga
+
+STATUS: Discontinued
+REASON: Extreme danger to customer health
+
+NOTES: It's me, Dave. The board is forcing me to resign, so I'm leaving this here to set the record straight. Eidolon put too much money into the Cybersaga, so with the canceled release, I doubt the company will be around too much longer. For my part, I'm planning on retiring. Maybe buying an island, too.
+P.S. I dropped the Cybersaga off a cliff after the Annual Appreciation Day fiasco. You're welcome.
+
+PROJECT PLANS DOWNLOAD COMPLETE"
+
 [sub_resource type="Resource" id="Resource_wshnm"]
 script = ExtResource("4_hinck")
 id = 0
@@ -185,24 +298,28 @@ email_prereqs = Array[int]([1])
 script = ExtResource("4_hinck")
 id = 3
 post_title = "What is known about the Cybersaga's development?"
+post_required_infos = Array[int]([9, 10, 11])
 info_prereqs = Array[int]([8])
 
 [sub_resource type="Resource" id="Resource_opsgy"]
 script = ExtResource("4_hinck")
 id = 4
 post_title = "Why was the Cybersaga never released?"
-post_required_infos = Array[int]([9])
-info_prereqs = Array[int]([9])
+post_required_infos = Array[int]([12, 13, 14])
+info_prereqs = Array[int]([12])
 
 [sub_resource type="Resource" id="Resource_dmh8s"]
 script = ExtResource("4_hinck")
 id = 7
 post_title = "What was the Cybersaga's unique selling point?"
+post_required_infos = Array[int]([15, 16])
+info_prereqs = Array[int]([15])
 
 [sub_resource type="Resource" id="Resource_pkm2a"]
 script = ExtResource("4_hinck")
 id = 9
 post_title = "Where is the only completed Cybersaga now?"
+post_required_infos = Array[int]([17])
 email_prereqs = Array[int]([3])
 
 [sub_resource type="Resource" id="Resource_b2kmk"]
@@ -253,7 +370,47 @@ info_blurb = "Dave Brunswick claimed that Cybersaga games would offer an immersi
 [sub_resource type="Resource" id="Resource_qinfc"]
 script = ExtResource("4_b43q5")
 id = 9
+info_blurb = "Development on the Cybersaga began in 1998 after the success of the Game and Go and the release of popular 3D console games from Eidolon's competitors."
+
+[sub_resource type="Resource" id="Resource_xxciq"]
+script = ExtResource("4_b43q5")
+id = 10
+info_blurb = "Unusually, Dave Brunswick himself was a co-lead on the design team, even though he had no background in hardware development."
+
+[sub_resource type="Resource" id="Resource_8h2gw"]
+script = ExtResource("4_b43q5")
+id = 11
+info_blurb = "The Cybersaga's development was very secretive, and playtests were restricted to a small anonymous group of in-house QA testers."
+
+[sub_resource type="Resource" id="Resource_el84a"]
+script = ExtResource("4_b43q5")
+id = 12
 info_blurb = "Eidolon hid the reason for canceling the Cybersaga's release, even from close collaborators, and ensured that no information ever found its way to the public internet."
+
+[sub_resource type="Resource" id="Resource_vcwvp"]
+script = ExtResource("4_b43q5")
+id = 13
+info_blurb = "There are rumors about a disastrous pre-launch Cybersaga demo held for Eidolon's employees and their family. Some think it influenced the decision to cancel the release."
+
+[sub_resource type="Resource" id="Resource_xkk4w"]
+script = ExtResource("4_b43q5")
+id = 14
+info_blurb = "The Cybersaga's Saga Crystal malfunctioned at the Annual Appreciation Event, causing mass psychosis in the demo participants."
+
+[sub_resource type="Resource" id="Resource_kq0p0"]
+script = ExtResource("4_b43q5")
+id = 15
+info_blurb = "An ad in Game Design Now shows a partial view of the Cybersaga. Its most noticeable feature is a jagged purple crystal under a glass dome on the top of the console."
+
+[sub_resource type="Resource" id="Resource_a2sex"]
+script = ExtResource("4_b43q5")
+id = 16
+info_blurb = "The Cybersaga contained a Saga Crystal, a unique creation of the Eidolon labs. It enhanced the immersion of games by inducing hallucinations in players."
+
+[sub_resource type="Resource" id="Resource_w7tor"]
+script = ExtResource("4_b43q5")
+id = 17
+info_blurb = "Dave Brunswick personally dropped the only completed Cybersaga off of a cliff before retiring and buying an island. However, you now possess a copy of the plans."
 
 [node name="GameState" type="Node" unique_id=1718591218]
 script = ExtResource("1_321hb")
@@ -263,10 +420,11 @@ app_names = Dictionary[int, String]({
 2: "Blog",
 3: "Portal"
 })
-emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_ou381"), SubResource("Resource_hinck"), SubResource("Resource_b43q5"), SubResource("Resource_n02c0")])
-search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l"), SubResource("Resource_mhmfr"), SubResource("Resource_td4en"), SubResource("Resource_00i5b"), SubResource("Resource_uu0e1"), SubResource("Resource_t1626"), SubResource("Resource_186ac"), SubResource("Resource_eetof")])
+emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_ou381"), SubResource("Resource_hinck"), SubResource("Resource_b43q5"), SubResource("Resource_wtwmm"), SubResource("Resource_n02c0")])
+search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l"), SubResource("Resource_mhmfr"), SubResource("Resource_td4en"), SubResource("Resource_00i5b"), SubResource("Resource_uu0e1"), SubResource("Resource_t1626"), SubResource("Resource_186ac"), SubResource("Resource_eetof"), SubResource("Resource_0iufh"), SubResource("Resource_0tqo2"), SubResource("Resource_n5vws")])
+portal_search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_613m7"), SubResource("Resource_1cg44"), SubResource("Resource_p8q4l"), SubResource("Resource_iwy35"), SubResource("Resource_xcm6g"), SubResource("Resource_8bawm"), SubResource("Resource_8ot7y")])
 blog_posts = Array[ExtResource("4_hinck")]([SubResource("Resource_wshnm"), SubResource("Resource_068d4"), SubResource("Resource_rjw16"), SubResource("Resource_730wy"), SubResource("Resource_opsgy"), SubResource("Resource_dmh8s"), SubResource("Resource_pkm2a")])
-infos = Array[ExtResource("4_b43q5")]([SubResource("Resource_b2kmk"), SubResource("Resource_vpphb"), SubResource("Resource_yys8v"), SubResource("Resource_2ihq6"), SubResource("Resource_b3g5w"), SubResource("Resource_dwn85"), SubResource("Resource_ht8ty"), SubResource("Resource_8uswj"), SubResource("Resource_wypqq"), SubResource("Resource_qinfc")])
+infos = Array[ExtResource("4_b43q5")]([SubResource("Resource_b2kmk"), SubResource("Resource_vpphb"), SubResource("Resource_yys8v"), SubResource("Resource_2ihq6"), SubResource("Resource_b3g5w"), SubResource("Resource_dwn85"), SubResource("Resource_ht8ty"), SubResource("Resource_8uswj"), SubResource("Resource_wypqq"), SubResource("Resource_qinfc"), SubResource("Resource_xxciq"), SubResource("Resource_8h2gw"), SubResource("Resource_el84a"), SubResource("Resource_vcwvp"), SubResource("Resource_xkk4w"), SubResource("Resource_kq0p0"), SubResource("Resource_a2sex"), SubResource("Resource_w7tor")])
 no_results_message = "No results found.
 
 Did you misspell something?"
