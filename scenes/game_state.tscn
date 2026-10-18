@@ -68,7 +68,7 @@ script = ExtResource("3_b43q5")
 id = 2
 search_result_keywords = Array[String](["heidi schuman"])
 discoverable_infos = Array[int]([1])
-search_result_text = "Heidi Schuman was Eidolon's head of hardware development from 1993 until their abrupt closing in 2002. Her last public appearance with the company was a press conference about the upcoming Cybersaga release.
+search_result_text = "Heidi Schuman was Eidolon's head of hardware development from 1993 until their abrupt closing in 2002. Her last public appearance with the company was a press conference at ConsoleCon about the upcoming Cybersaga release.
 
 You find a transcript of her talk, but Heidi stayed annoyingly vague throughout the entire thing. The most concrete thing she said was that the Cybersaga \"promised a revolutionary new gaming experience.\""
 
@@ -79,9 +79,67 @@ search_result_keywords = Array[String](["summer fields"])
 discoverable_infos = Array[int]([2])
 search_result_text = "Summer Fields is a series of farming sim games named after the titular main character. It takes some time to scroll past all of the results for the latest game in the series, but eventually you find a news article about the release of the original game during the holiday season of 2001.
 
-Apparently, the game wasn't expected to sell very well, but intrigue surrounding the Cybersaga, which was supposed to launch around the same time, catapulted the game to cult classic status overnight.
+Apparently, the game wasn't expected to sell very well, but intrigue surrounding the Cybersaga, which was supposed to launch around the same time, catapulted the game to cult classic status overnight. The ill-fated console has mostly been forgotten, but Summer Fields is still incredibly popular.
 
 You remember playing this game when you were younger. Despite the cute pixel art graphics, it was so difficult that you never made it past the first in-game week."
+
+[sub_resource type="Resource" id="Resource_mhmfr"]
+script = ExtResource("3_b43q5")
+id = 4
+search_result_keywords = Array[String](["eidolon"])
+discoverable_infos = Array[int]([3])
+search_result_text = "Your search unleashes a flood of video game related news articles, ads, and forum posts, all about Eidolon. You were already well aware of the famous game development company, as anyone who runs a retro gaming blog ought to.
+
+Eidolon was one of the biggest gaming companies of the 1990s, at least until their sudden bankruptcy in the first weeks of 2002. In hindsight, most people believe the collapse was due to Eidolon's inability to make the transition from 2D to 3D in time to keep up with their competitors.
+
+Even today, you can find unopened Eidolon Bestsellers Bundles going for hundreds of dollars on online marketplaces."
+
+[sub_resource type="Resource" id="Resource_td4en"]
+script = ExtResource("3_b43q5")
+id = 5
+search_result_keywords = Array[String](["eidolon bestsellers bundle", "bestsellers bundle"])
+discoverable_infos = Array[int]([4])
+search_result_text = "The Eidolon Bestseller Bundle was a collection of Eidolon's most popular games for the Game and Go, designed to be the perfect gift for the gamer in your life. They're now a sought-after collector's item, even though few people actually play the games anymore.
+
+The bundle came with Fortress Defender 2, Crazy Pineapple Man, and Mystery of the Golden Mountains.
+
+You also find a listing for a supposed unreleased prototype of a 3D sequel to Crazy Pineapple Man. The seller claims it was in development for the Cybersaga, but was canceled before ever being announced. It reads, \"You thought KNIGHT was the only CS game to ever exist? Well, think again! This one of a kind gem can be yours for just $1399!\""
+
+[sub_resource type="Resource" id="Resource_00i5b"]
+script = ExtResource("3_b43q5")
+id = 6
+search_result_keywords = Array[String](["crazy pineapple guy"])
+discoverable_infos = Array[int]([6])
+search_result_text = "Crazy Pineapple Guy was your best friend's favorite game in third grade. This beloved fruit juggling platformer is on your list of games to write a blog post about.
+
+A closer look at the search results reveal that many fans back in 2001 were hoping for a 3D sequel for the Cybersaga once it was announced that the console would exclusively cater to new 3D titles. Several game journalists predicted taht the CS was Eidolon's first step in pivoting away from 2D."
+
+[sub_resource type="Resource" id="Resource_uu0e1"]
+script = ExtResource("3_b43q5")
+id = 7
+search_result_keywords = Array[String](["knight"])
+discoverable_infos = Array[int]([7])
+search_result_text = "Eventually released for desktop computers in 2003, KNIGHT was a groundbreaking action adventure game developed by Anxious Squirrel Games. It was initally supposed to be a Cybersaga exclusive title, but after Eidolon's bankruptcy, Anxious Squirrel was able to find another publisher with enough funding to finish the game. It was the first and only game announced for the CS.
+
+The sweeping landscapes and experimental mechanics solidified KNIGHT's place in gaming history, and you're proud to say you've played through it five separate times."
+
+[sub_resource type="Resource" id="Resource_t1626"]
+script = ExtResource("3_b43q5")
+id = 8
+search_result_keywords = Array[String](["consolecon"])
+discoverable_infos = Array[int]([8])
+search_result_text = "ConsoleCon is an annual video game convention focusing on console games and hardware. The website contains archives of various talks and exhibits from previous years, and a thorough search yields more information about the Eidolon press conference about the Cybersaga.
+
+Alongside Heidi Schuman, Dave Brunswick spoke briefly about how Cybersaga games would offer an immersive experience \"almost indistinguishable from reality.\""
+
+[sub_resource type="Resource" id="Resource_186ac"]
+script = ExtResource("3_b43q5")
+id = 9
+search_result_keywords = Array[String](["dave brunswick"])
+discoverable_infos = Array[int]([5])
+search_result_text = "Searching Dave Brunswick's name brings up dated headshots of a balding, middle-aged man with a cheesy grin. Surprisingly, Eidolon's defunct website still has a reachable profile page for him. He was the CEO at the time of the bankruptcy.
+
+You also find several older articles praising his leadership skills and involvement in the creative aspects of Eidolon. It seems that before he became an executive, he had always wanted to make video games. You're unable to find any information about what he's up to these days."
 
 [sub_resource type="Resource" id="Resource_wshnm"]
 script = ExtResource("4_hinck")
@@ -94,12 +152,14 @@ email_prereqs = Array[int]([0])
 script = ExtResource("4_hinck")
 id = 1
 post_title = "What was Eidolon?"
+post_required_infos = Array[int]([3, 4, 5])
 email_prereqs = Array[int]([1])
 
 [sub_resource type="Resource" id="Resource_rjw16"]
 script = ExtResource("4_hinck")
 id = 2
 post_title = "What games were made for the Cybersaga?"
+post_required_infos = Array[int]([6, 7, 8])
 email_prereqs = Array[int]([1])
 
 [sub_resource type="Resource" id="Resource_730wy"]
@@ -155,6 +215,36 @@ script = ExtResource("4_b43q5")
 id = 2
 info_blurb = "The CS was planned to be released for the 2001 holiday season, but never made it to store shelves."
 
+[sub_resource type="Resource" id="Resource_2ihq6"]
+script = ExtResource("4_b43q5")
+id = 3
+info_blurb = "Eidolon was one of the biggest video game companies in the 1990s."
+
+[sub_resource type="Resource" id="Resource_b3g5w"]
+script = ExtResource("4_b43q5")
+id = 4
+info_blurb = "Eidolon was famous for hits such as Fortress Defender 2, Crazy Pineapple Guy, and Mystery of the Golden Mountains."
+
+[sub_resource type="Resource" id="Resource_dwn85"]
+script = ExtResource("4_b43q5")
+id = 5
+info_blurb = "Eidolon's CEO during the Cybersaga's development was Dave Brunswick."
+
+[sub_resource type="Resource" id="Resource_ht8ty"]
+script = ExtResource("4_b43q5")
+id = 6
+info_blurb = "The Cybersaga was made to run Eidolon's first in-house 3D games."
+
+[sub_resource type="Resource" id="Resource_8uswj"]
+script = ExtResource("4_b43q5")
+id = 7
+info_blurb = "The first and only game announced for the CS was KNIGHT, an action adventure title."
+
+[sub_resource type="Resource" id="Resource_wypqq"]
+script = ExtResource("4_b43q5")
+id = 8
+info_blurb = "Dave Brunswick claimed that Cybersaga games would offer an immersive experience \"almost indistinguishable from reality.\""
+
 [node name="GameState" type="Node" unique_id=1718591218]
 script = ExtResource("1_321hb")
 app_names = Dictionary[int, String]({
@@ -164,9 +254,9 @@ app_names = Dictionary[int, String]({
 3: "Portal"
 })
 emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_ou381"), SubResource("Resource_hinck"), SubResource("Resource_b43q5"), SubResource("Resource_n02c0")])
-search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l")])
+search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l"), SubResource("Resource_mhmfr"), SubResource("Resource_td4en"), SubResource("Resource_00i5b"), SubResource("Resource_uu0e1"), SubResource("Resource_t1626"), SubResource("Resource_186ac")])
 blog_posts = Array[ExtResource("4_hinck")]([SubResource("Resource_wshnm"), SubResource("Resource_068d4"), SubResource("Resource_rjw16"), SubResource("Resource_730wy"), SubResource("Resource_opsgy"), SubResource("Resource_eetof"), SubResource("Resource_qinfc"), SubResource("Resource_dmh8s"), SubResource("Resource_wtwmm"), SubResource("Resource_pkm2a")])
-infos = Array[ExtResource("4_b43q5")]([SubResource("Resource_b2kmk"), SubResource("Resource_vpphb"), SubResource("Resource_yys8v")])
+infos = Array[ExtResource("4_b43q5")]([SubResource("Resource_b2kmk"), SubResource("Resource_vpphb"), SubResource("Resource_yys8v"), SubResource("Resource_2ihq6"), SubResource("Resource_b3g5w"), SubResource("Resource_dwn85"), SubResource("Resource_ht8ty"), SubResource("Resource_8uswj"), SubResource("Resource_wypqq")])
 no_results_message = "No results found.
 
 Did you misspell something?"

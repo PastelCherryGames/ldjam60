@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://cxdonqanebxtv" path="res://scripts/custom_resources/custom_tween_res.gd" id="4_nasuy"]
 [ext_resource type="Texture2D" uid="uid://bimrq7mw83cy5" path="res://icon.svg" id="5_tgu2l"]
 [ext_resource type="PackedScene" uid="uid://k8qq23qn7uwu" path="res://scenes/alert_icon.tscn" id="6_85g46"]
-[ext_resource type="LabelSettings" uid="uid://j72oxc0ukosw" path="res://assets/font_settings/title.tres" id="7_3jacr"]
 
 [sub_resource type="Resource" id="Resource_ya4ey"]
 script = ExtResource("4_nasuy")
@@ -17,6 +16,9 @@ false: Color(1, 1, 1, 0),
 true: Color(1, 1, 1, 1)
 }
 metadata/_custom_type_script = "uid://cxdonqanebxtv"
+
+[sub_resource type="LabelSettings" id="LabelSettings_ge7xu"]
+font_color = Color(0.15, 0.15, 0.15, 1)
 
 [node name="InfoEntry" type="MarginContainer" unique_id=2040673905]
 script = ExtResource("1_3pwjq")
@@ -89,7 +91,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Info Blurb"
-label_settings = ExtResource("7_3jacr")
+label_settings = SubResource("LabelSettings_ge7xu")
 autowrap_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1380266546]
