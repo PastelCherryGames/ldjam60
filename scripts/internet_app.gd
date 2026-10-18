@@ -21,7 +21,6 @@ func _ready() -> void:
 	notify_source.hide()
 	notify_visited.hide()
 	search_result_label.text = ''
-	search_line_edit.max_length = GameState.get_longest_search_keyword_length(E.App.INTERNET)
 	search_line_edit.text_submitted.connect(_search_internet.unbind(1))
 	search_button.pressed.connect(_search_internet)
 	back_button.pressed.connect(_move_through_history.bind(-1))

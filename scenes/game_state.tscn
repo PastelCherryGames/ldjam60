@@ -45,7 +45,7 @@ script = ExtResource("2_0ebsy")
 id = 2
 email_subject = "Potential source for your research"
 email_from = "A Returning Reader"
-email_body = "I read your latest post about the CS, and it reminded me of another blogger I've seen mention it. I think he used to be a playtester for Eidolon or something. Try searching for Ryan Marshall, his website should come up.
+email_body = "I read your latest post about the CS, and it reminded me of another blogger I've seen mention it. I think he used to be a playtester for Eidolon or something. Try searching for Ryan Marshall and his website should come up.
 
 Hope this gives you more content for the blog."
 email_num_blog_posts = 3
@@ -53,6 +53,7 @@ email_num_blog_posts = 3
 [sub_resource type="Resource" id="Resource_wtwmm"]
 script = ExtResource("2_0ebsy")
 id = 4
+email_subject = "Hey fellow game blogger!"
 email_from = "Ryan Marshall"
 email_body = "A friend sent me your blog post quoting me, and I ended up reading your whole Cybersaga series in one sitting. Super impressive how much you've been able to dig up about the whole situation.
 
@@ -67,9 +68,7 @@ script = ExtResource("2_0ebsy")
 id = 3
 email_subject = "EIDOLON"
 email_from = "EIDOLON"
-email_body = "If you know what's good for you, you'll quit this investigative journalist nonsense.
-
-Project -5---9-0- was meant to be lost forever.
+email_body = "PROJECT -5---9-0-
 
 END MESSAGE"
 email_num_blog_posts = 6
@@ -125,22 +124,22 @@ They're most famous for their Game and Go handheld consoles. Even today, you can
 [sub_resource type="Resource" id="Resource_td4en"]
 script = ExtResource("3_b43q5")
 id = 5
-search_result_keywords = Array[String](["eidolon bestsellers bundle", "bestsellers bundle"])
+search_result_keywords = Array[String](["eidolon bestsellers bundle", "bestsellers bundle", "eidolon bestseller bundle", "bestseller bundle"])
 discoverable_infos = Array[int]([4])
-search_result_text = "The Eidolon Bestseller Bundle was a collection of Eidolon's most popular games for the Game and Go, designed to be the perfect gift for the gamer in your life. They're now a sought-after collector's item, even though few people actually play the games anymore.
+search_result_text = "The Eidolon Bestsellers Bundle was a collection of Eidolon's most popular games for the Game and Go, designed to be the perfect gift for the gamer in your life. They're now a sought-after collector's item, even though few people actually play the games anymore.
 
 The bundle came with Fortress Defender 2, Crazy Pineapple Man, and Mystery of the Golden Mountains.
 
-You also find a listing for a supposed unreleased prototype of a 3D sequel to Crazy Pineapple Man. The seller claims it was in development for the Cybersaga, but was canceled before ever being announced. It reads, \"You thought KNIGHT was the only CS game to ever exist? Well, think again! This one of a kind gem can be yours for just $1399!\""
+You also find a listing for a supposed unreleased prototype of a 3D sequel to Crazy Pineapple Man. The seller claims it was in development for the Cybersaga, but was canceled before ever being announced. It reads, \"You thought KNIGHT was the only Cybersaga game to ever exist? Well, think again! This one of a kind gem can be yours for just $1399!\""
 
 [sub_resource type="Resource" id="Resource_00i5b"]
 script = ExtResource("3_b43q5")
 id = 6
 search_result_keywords = Array[String](["crazy pineapple guy"])
 discoverable_infos = Array[int]([6])
-search_result_text = "Crazy Pineapple Guy was your best friend's favorite game in third grade. This beloved fruit juggling platformer is on your list of games to write a blog post about.
+search_result_text = "Crazy Pineapple Guy was a widely loved fruit juggling platformer developed by Eidolon.
 
-A closer look at the search results reveal that many fans back in 2001 were hoping for a 3D sequel for the Cybersaga once it was announced that the console would exclusively cater to new 3D titles. Several game journalists predicted taht the CS was Eidolon's first step in pivoting away from 2D."
+A closer look at the search results reveal that many fans back in 2001 were hoping for a 3D sequel for the Cybersaga once it was announced that the console would exclusively cater to new 3D titles. Several game journalists predicted that the CS was Eidolon's first step in pivoting away from 2D."
 
 [sub_resource type="Resource" id="Resource_uu0e1"]
 script = ExtResource("3_b43q5")
@@ -173,10 +172,10 @@ You also find several older articles praising his leadership skills and involvem
 script = ExtResource("3_b43q5")
 id = 10
 search_result_keywords = Array[String](["anxious squirrel", "anxious squirrel games"])
-discoverable_infos = Array[int]([9])
+discoverable_infos = Array[int]([12])
 search_result_text = "Cofounded by brother and sister duo Chris and Janet Parker, Anxious Squirrel Games is a medium-sized game studio with a solid track record of atmospheric action adventure titles. After releasing their breakout hit KNIGHT, the studio went on to create multiple highly acclaimed games and is currently working on a spiritual successor to KNIGHT.
 
-In an interview from 2004, Janet described the dire straits the studio was in after the canceled release of the Cybersaga. \"Here we had a game we really believed in, with close to two years of development time invested, and Eidolon just goes radio silent. I mean, we couldn't get anyone to tell us what was going on with the CS. I'm just happy that we were able to recover and that fans are finally able to play KNIGHT.\""
+In an interview with the Tech Informer, Janet described the dire straits the studio was in after the canceled release of the Cybersaga. \"Here we had a game we really believed in, with close to two years of development time invested, and Eidolon just goes radio silent. I mean, we couldn't get anyone to tell us what was going on with the CS. I'm just happy that we were able to recover and that fans are finally able to play KNIGHT.\""
 
 [sub_resource type="Resource" id="Resource_0iufh"]
 script = ExtResource("3_b43q5")
@@ -205,9 +204,9 @@ script = ExtResource("3_b43q5")
 id = 14
 search_result_keywords = Array[String](["ryan marshall"])
 discoverable_infos = Array[int]([11])
-search_result_text = "You're able to find Ryan Marshall's social media account, but he hasn't been active in years. His last post was from shortly after Eidolon's bankruptcy and is in response to a user asking for former Eidolon employees' opinions of the situation.
+search_result_text = "You're able to find Ryan Marshall's social media account, but he hasn't been active in years. His last post was from shortly after Eidolon's bankruptcy and is in response to a user asking for former Eidolon employees' opinions.
 
-It reads, \"The whole thing just came out of nowhere. Some of my old coworkers from the playtesting department think it's related to the Cybersaga being canceled, but most of us never even saw the new console. No one was even allowed to know who was assigned to the QA team.\"
+It reads, \"The whole situation just came out of nowhere. Some of my old coworkers from the playtesting department think it's related to the Cybersaga being canceled, but most of us never even saw the new console. No one was even allowed to know who was assigned to the QA team.\"
 
 Ryan's profile also has a broken link to his blog, All About Playtesting."
 
@@ -227,7 +226,7 @@ script = ExtResource("3_b43q5")
 id = 16
 search_result_keywords = Array[String](["game design now"])
 discoverable_infos = Array[int]([15])
-search_result_text = "Game Design Now is a popular quarterly magazine about how video game are made. It offers a bundle subscription deal with the Tech Informer, which you're already a reader of.
+search_result_text = "Game Design Now is a popular quarterly magazine about how video game are made.
 
 You find an archive of digitized copies of the magazine, and open the issue published right before the Cybersaga was canceled. It's mostly filled with articles about games releasing in 2001 and 2002, but you notice an Eidolon advertisement. The Cybersaga is partially covered by large, blocky text, but you can see an unusual jagged purple crystal encased in a glass dome on the top of the console."
 
@@ -286,7 +285,7 @@ search_result_text = "FOLDER: Ryan Marshall
 POSITION: Junior Playtester
 STATUS: Employment dissolved upon company bankruptcy
 
-Ryan's folder is mostly filled with unimportant information, but you notice an unopened email from 2001 about an Annual Appreciation Event Eidolon was holding for its employees."
+Ryan's folder is mostly filled with unimportant information, but you notice an unopened email from 2001 about an Annual Appreciation Event that Eidolon was holding for its employees."
 
 [sub_resource type="Resource" id="Resource_xcm6g"]
 script = ExtResource("3_b43q5")

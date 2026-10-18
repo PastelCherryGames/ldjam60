@@ -47,6 +47,9 @@ label_settings = ExtResource("2_dv8is")
 visible = true
 theme_override_styles/panel = SubResource("StyleBoxFlat_vmlxg")
 
+[node name="NotifyLabel" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifyInfoEntry/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(213704604, 652084115) index="0" unique_id=1059113113]
+text = "New info discovered!"
+
 [editable path="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifyInfoEntry"]
 [editable path="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifySourceEntry"]
 [editable path="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/NotifyVBox/NotifyVisitedEntry"]

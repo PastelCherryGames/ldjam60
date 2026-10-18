@@ -75,10 +75,21 @@ size_flags_horizontal = 3
 layout_mode = 2
 theme_override_constants/margin_left = 4
 
-[node name="BlogPostsLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer" index="0" unique_id=1418183552]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer" index="0" unique_id=645544222]
+layout_mode = 2
+
+[node name="BlogPostsLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer/VBoxContainer" index="0" unique_id=1418183552]
 layout_mode = 2
 text = "Blog Posts"
 label_settings = ExtResource("3_ndd4w")
+
+[node name="MoreBlogsLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer/VBoxContainer" index="1" unique_id=1977743850]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "You have ideas for more blogs posts, but you need the right inspiration..."
+label_settings = SubResource("LabelSettings_lmetc")
+autowrap_mode = 3
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts" index="1" unique_id=270383983]
 layout_mode = 2
