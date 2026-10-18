@@ -10,5 +10,6 @@ class_name InfoRes
 
 @export_group('Hidden')
 @export var discovered_index: int = -1
+@export var used := false
 @export var discovered_search_sources: Array[int] = []
 @export var discovered_portal_sources: Array[int] = []

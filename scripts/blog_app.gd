@@ -10,6 +10,7 @@ class_name BlogApp
 func _ready() -> void:
 	super()
 	GameState.blog_post_unlocked.connect(_refresh_posts)
+	GameState.blog_post_published.connect(_refresh_infos.unbind(1))
 	_refresh_infos()
 	_refresh_posts()
 
@@ -27,7 +28,7 @@ func _refresh_infos() -> void:
 		child.queue_free()
 	GameState.infos.sort_custom(GameState.sort_infos)
 	for info in GameState.infos:
-		if info.discovered_index > -1:
+		if info.discovered_index > -1 && !info.used:
 			if empty_label.visible: empty_label.hide()
 			var entry: InfoEntry = GameState.info_entry_scene.instantiate()
 			entry.set_up_info_entry(info)

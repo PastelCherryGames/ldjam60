@@ -66,5 +66,8 @@ func _publish_post(emit: bool) -> void:
 	publish_button.disabled = true
 	publish_button.text = 'Published'
 	if emit:
-		GameState.get_entry(GameState.blog_posts, own_post_id).published_index = GameState.get_found_index(GameState.blog_posts, 'published_index')
+		var own_post: BlogPostRes = GameState.get_entry(GameState.blog_posts, own_post_id)
+		own_post.published_index = GameState.get_found_index(GameState.blog_posts, 'published_index')
+		for info in own_post.post_required_infos:
+			GameState.get_entry(GameState.infos, info).used = true
 		GameState.blog_post_submitted.emit(own_post_id)

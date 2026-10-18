@@ -92,7 +92,7 @@ search_result_text = "Your search unleashes a flood of video game related news a
 
 Eidolon was one of the biggest gaming companies of the 1990s, at least until their sudden bankruptcy in the first weeks of 2002. In hindsight, most people believe the collapse was due to Eidolon's inability to make the transition from 2D to 3D in time to keep up with their competitors.
 
-Even today, you can find unopened Eidolon Bestsellers Bundles going for hundreds of dollars on online marketplaces."
+They're most famous for their Game and Go handheld consoles. Even today, you can find unopened Eidolon Bestsellers Bundles going for hundreds of dollars on online marketplaces."
 
 [sub_resource type="Resource" id="Resource_td4en"]
 script = ExtResource("3_b43q5")
@@ -204,46 +204,55 @@ email_prereqs = Array[int]([3])
 script = ExtResource("4_b43q5")
 id = 0
 info_blurb = "The Cybersaga (abbreviated as CS) was a video game console rumored to have been developed by Eidolon."
+used = null
 
 [sub_resource type="Resource" id="Resource_vpphb"]
 script = ExtResource("4_b43q5")
 id = 1
 info_blurb = "The CS \"promised an revolutionary new gaming experience\"."
+used = null
 
 [sub_resource type="Resource" id="Resource_yys8v"]
 script = ExtResource("4_b43q5")
 id = 2
 info_blurb = "The CS was planned to be released for the 2001 holiday season, but never made it to store shelves."
+used = null
 
 [sub_resource type="Resource" id="Resource_2ihq6"]
 script = ExtResource("4_b43q5")
 id = 3
 info_blurb = "Eidolon was one of the biggest video game companies in the 1990s."
+used = null
 
 [sub_resource type="Resource" id="Resource_b3g5w"]
 script = ExtResource("4_b43q5")
 id = 4
 info_blurb = "Eidolon was famous for hits such as Fortress Defender 2, Crazy Pineapple Guy, and Mystery of the Golden Mountains."
+used = null
 
 [sub_resource type="Resource" id="Resource_dwn85"]
 script = ExtResource("4_b43q5")
 id = 5
 info_blurb = "Eidolon's CEO during the Cybersaga's development was Dave Brunswick."
+used = null
 
 [sub_resource type="Resource" id="Resource_ht8ty"]
 script = ExtResource("4_b43q5")
 id = 6
 info_blurb = "The Cybersaga was made to run Eidolon's first in-house 3D games."
+used = null
 
 [sub_resource type="Resource" id="Resource_8uswj"]
 script = ExtResource("4_b43q5")
 id = 7
 info_blurb = "The first and only game announced for the CS was KNIGHT, an action adventure title."
+used = null
 
 [sub_resource type="Resource" id="Resource_wypqq"]
 script = ExtResource("4_b43q5")
 id = 8
 info_blurb = "Dave Brunswick claimed that Cybersaga games would offer an immersive experience \"almost indistinguishable from reality.\""
+used = null
 
 [node name="GameState" type="Node" unique_id=1718591218]
 script = ExtResource("1_321hb")
