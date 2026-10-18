@@ -5,7 +5,7 @@
 [ext_resource type="LabelSettings" uid="uid://bwhj8tonrrook" path="res://assets/font_settings/heading.tres" id="3_ndd4w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lmetc"]
-font_size = 14
+line_spacing = 0.0
 font_color = Color(0.3, 0.3, 0.3, 1)
 
 [node name="BlogWindow" unique_id=122213665 instance=ExtResource("1_2asar")]
@@ -32,10 +32,11 @@ layout_mode = 2
 text = "Research"
 label_settings = ExtResource("3_ndd4w")
 
-[node name="Label" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/MarginContainer/VBoxContainer" index="1" unique_id=30426835]
-visible = false
+[node name="EmptyLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Infos/MarginContainer/VBoxContainer" index="1" unique_id=30426835]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "Select a piece of info from this list, then click on a slot to add it to a blog post. Once you have the correct info for a blog post, you can publish it."
+text = "Once you discover new information by searching the internet, it will appear here."
 label_settings = SubResource("LabelSettings_lmetc")
 autowrap_mode = 3
 
@@ -95,10 +96,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
 
 [node name="BlogPostsVBox" type="VBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/BlogPosts/MarginContainer2/ScrollContainer/MarginContainer" index="0" unique_id=1129978511]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 2
+theme_override_constants/separation = 8

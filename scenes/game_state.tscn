@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://cycabrwenkh3b" path="res://scripts/utility/game_state.gd" id="1_321hb"]
 [ext_resource type="Script" uid="uid://bqe706jnsw83u" path="res://scripts/custom_resources/email_res.gd" id="2_0ebsy"]
 [ext_resource type="PackedScene" uid="uid://n7yrxfnveo5k" path="res://scenes/inbox_entry.tscn" id="2_jy5aj"]
-[ext_resource type="Script" uid="uid://b7agwcrdnkjay" path="res://scripts/custom_resources/search_result_res.gd" id="3_2cevy"]
+[ext_resource type="Script" uid="uid://b7agwcrdnkjay" path="res://scripts/custom_resources/search_result_res.gd" id="3_b43q5"]
+[ext_resource type="Script" uid="uid://draxgf5nhsd6n" path="res://scripts/custom_resources/info_res.gd" id="4_b43q5"]
 [ext_resource type="Script" uid="uid://b2q8byklk1blw" path="res://scripts/custom_resources/blog_post_res.gd" id="4_hinck"]
-[ext_resource type="Script" uid="uid://draxgf5nhsd6n" path="res://scripts/custom_resources/info_res.gd" id="4_q5byu"]
 [ext_resource type="PackedScene" uid="uid://cb3pamrfmfk17" path="res://scenes/info_entry.tscn" id="6_vsyf1"]
 [ext_resource type="PackedScene" uid="uid://bdx2k0jk0wj1x" path="res://scenes/blog_info_button.tscn" id="7_ou381"]
 [ext_resource type="StyleBox" uid="uid://cm15eel8g2amy" path="res://assets/styleboxes/entry_hover_style_box_flat.tres" id="7_vsyf1"]
@@ -14,73 +14,146 @@
 [ext_resource type="StyleBox" uid="uid://jo7o70j7wbfl" path="res://assets/styleboxes/post_unpublished_style_box_flat.tres" id="9_7ti0s"]
 [ext_resource type="StyleBox" uid="uid://bwxvcitqv77od" path="res://assets/styleboxes/post_published_style_box_flat.tres" id="10_ou381"]
 
-[sub_resource type="Resource" id="Resource_2cevy"]
+[sub_resource type="Resource" id="Resource_ou381"]
 script = ExtResource("2_0ebsy")
 id = 0
-email_subject = "email 1"
-email_from = "sender 1"
-email_to = "receiver 1"
-email_body = "Hi this is email 1
-This is a new line"
-email_num_blog_posts = -1
-trigger_portal = true
+email_subject = "Have you heard of the Eidolon Cybersaga?"
+email_from = "A Fan of Your Blog"
+email_body = "Hey there!
+
+I've been reading your blog for a while, and I love your deep dives into retro consoles. I remember playing on the Game and Go as a kid, so it was fun to see you mention it in your post last week!
+
+Anyways,speaking of Eidolon consoles, do you have any information about the Cybersaga? I heard from a buddy of mine that it was some crazy new console that never got released before the company went under. I've been having trouble finding anything about it online other than rumors, so I thought I'd reach out and see if you know more.
+
+Maybe you could even write a blog post about it!"
 sent_index = 0
 
-[sub_resource type="Resource" id="Resource_q5byu"]
+[sub_resource type="Resource" id="Resource_hinck"]
 script = ExtResource("2_0ebsy")
 id = 1
-email_subject = "email 2"
-email_from = "sender 2"
-email_to = "receiver 2"
-email_body = "Hi this is email 2
-This is a new line"
+email_body = "Email triggers 2 & 4"
 email_num_blog_posts = 1
 
-[sub_resource type="Resource" id="Resource_vsyf1"]
-script = ExtResource("3_2cevy")
-id = 0
-search_result_keywords = Array[String](["test"])
-discoverable_infos = Array[int]([2])
-search_result_text = "Result 1
-
-New line!"
-
-[sub_resource type="Resource" id="Resource_3oy0g"]
-script = ExtResource("3_2cevy")
-id = 1
-search_result_keywords = Array[String](["hello"])
-search_result_text = "hi"
-
-[sub_resource type="Resource" id="Resource_7ti0s"]
-script = ExtResource("3_2cevy")
+[sub_resource type="Resource" id="Resource_b43q5"]
+script = ExtResource("2_0ebsy")
 id = 2
-search_result_keywords = Array[String](["hi"])
-search_result_text = "hello"
+email_body = "Triggers 6 & 9"
+email_num_blog_posts = 3
 
 [sub_resource type="Resource" id="Resource_n02c0"]
+script = ExtResource("2_0ebsy")
+id = 3
+email_body = "Triggers 10"
+email_num_blog_posts = 9
+
+[sub_resource type="Resource" id="Resource_72iso"]
+script = ExtResource("3_b43q5")
+id = 0
+search_result_keywords = Array[String](["cybersaga"])
+discoverable_infos = Array[int]([0])
+search_result_text = "Your search yields little information. The Cybersaga, often abbreviated as CS on retro gaming forums, was a video game console rumored to have been developed by a company called Eidolon.
+
+The company sounds familiar, but you've never heard of the Cybersaga before today. Maybe there's some more helpful information in the email you received?"
+
+[sub_resource type="Resource" id="Resource_38bpc"]
+script = ExtResource("3_b43q5")
+id = 1
+search_result_keywords = Array[String](["game and go"])
+search_result_text = "The Game and Go was a wildly popular handheld console developed by Eidolon in the mid 1990s. By the end of its lifespan, it boasted a library of over 300 games, the last of which was a cute farming sim called Summer Fields.
+
+According to an interview you found with Eidolon's head of hardware development, Heidi Schuman, the Game and Go was what really solidified the company's status as a household name."
+
+[sub_resource type="Resource" id="Resource_yewyn"]
+script = ExtResource("3_b43q5")
+id = 2
+search_result_keywords = Array[String](["heidi schuman"])
+discoverable_infos = Array[int]([1])
+search_result_text = "Heidi Schuman was Eidolon's head of hardware development from 1993 until their abrupt closing in 2002. Her last public appearance with the company was a press conference about the upcoming Cybersaga release.
+
+You find a transcript of her talk, but Heidi stayed annoyingly vague throughout the entire thing. The most concrete thing she said was that the Cybersaga \"promised a revolutionary new gaming experience.\""
+
+[sub_resource type="Resource" id="Resource_byh4l"]
+script = ExtResource("3_b43q5")
+id = 3
+search_result_keywords = Array[String](["summer fields"])
+discoverable_infos = Array[int]([2])
+search_result_text = "Summer Fields is a series of farming sim games named after the titular main character. It takes some time to scroll past all of the results for the latest game in the series, but eventually you find a news article about the release of the original game during the holiday season of 2001.
+
+Apparently, the game wasn't expected to sell very well, but intrigue surrounding the Cybersaga, which was supposed to launch around the same time, catapulted the game to cult classic status overnight.
+
+You remember playing this game when you were younger. Despite the cute pixel art graphics, it was so difficult that you never made it past the first in-game week."
+
+[sub_resource type="Resource" id="Resource_wshnm"]
 script = ExtResource("4_hinck")
 id = 0
-post_title = "Test Blog"
-post_blurb = "You did it!"
-post_required_infos = Array[int]([0])
+post_title = "What was the Cybersaga?"
+post_required_infos = Array[int]([0, 1, 2])
 email_prereqs = Array[int]([0])
 
-[sub_resource type="Resource" id="Resource_ou381"]
-script = ExtResource("4_q5byu")
-id = 0
-info_blurb = "The console was originallyplanned to release in 1997."
-discovered_index = 1
-
-[sub_resource type="Resource" id="Resource_hinck"]
-script = ExtResource("4_q5byu")
+[sub_resource type="Resource" id="Resource_068d4"]
+script = ExtResource("4_hinck")
 id = 1
-info_blurb = "Blurb 2"
-discovered_index = 0
+post_title = "What was Eidolon?"
+email_prereqs = Array[int]([1])
 
-[sub_resource type="Resource" id="Resource_b43q5"]
-script = ExtResource("4_q5byu")
+[sub_resource type="Resource" id="Resource_rjw16"]
+script = ExtResource("4_hinck")
 id = 2
-info_blurb = "Blurb 3"
+post_title = "What games were made for the Cybersaga?"
+email_prereqs = Array[int]([1])
+
+[sub_resource type="Resource" id="Resource_730wy"]
+script = ExtResource("4_hinck")
+id = 3
+post_title = "What is known about the Cybersaga's development?"
+
+[sub_resource type="Resource" id="Resource_opsgy"]
+script = ExtResource("4_hinck")
+id = 4
+post_title = "Why was the Cybersaga never released?"
+
+[sub_resource type="Resource" id="Resource_eetof"]
+script = ExtResource("4_hinck")
+id = 5
+post_title = "What did the Cybersaga's early playtesters think?"
+email_prereqs = Array[int]([2])
+
+[sub_resource type="Resource" id="Resource_qinfc"]
+script = ExtResource("4_hinck")
+id = 6
+post_title = "What happened after the Cybersaga's failed launch?"
+email_prereqs = Array[int]([2])
+
+[sub_resource type="Resource" id="Resource_dmh8s"]
+script = ExtResource("4_hinck")
+id = 7
+post_title = "What was the Cybersaga's unique selling point?"
+
+[sub_resource type="Resource" id="Resource_wtwmm"]
+script = ExtResource("4_hinck")
+id = 8
+post_title = "What happened at Eidolon's secret demo party?"
+
+[sub_resource type="Resource" id="Resource_pkm2a"]
+script = ExtResource("4_hinck")
+id = 9
+post_title = "Where is the only completed Cybersaga now?"
+email_prereqs = Array[int]([3])
+
+[sub_resource type="Resource" id="Resource_b2kmk"]
+script = ExtResource("4_b43q5")
+id = 0
+info_blurb = "The Cybersaga (abbreviated as CS) was a video game console rumored to have been developed by Eidolon."
+
+[sub_resource type="Resource" id="Resource_vpphb"]
+script = ExtResource("4_b43q5")
+id = 1
+info_blurb = "The CS \"promised an revolutionary new gaming experience\"."
+
+[sub_resource type="Resource" id="Resource_yys8v"]
+script = ExtResource("4_b43q5")
+id = 2
+info_blurb = "The CS was planned to be released for the 2001 holiday season, but never made it to store shelves."
 
 [node name="GameState" type="Node" unique_id=1718591218]
 script = ExtResource("1_321hb")
@@ -90,10 +163,10 @@ app_names = Dictionary[int, String]({
 2: "Blog",
 3: "Portal"
 })
-emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_2cevy"), SubResource("Resource_q5byu")])
-search_results = Array[ExtResource("3_2cevy")]([SubResource("Resource_vsyf1"), SubResource("Resource_3oy0g"), SubResource("Resource_7ti0s")])
-blog_posts = Array[ExtResource("4_hinck")]([SubResource("Resource_n02c0")])
-infos = Array[ExtResource("4_q5byu")]([SubResource("Resource_ou381"), SubResource("Resource_hinck"), SubResource("Resource_b43q5")])
+emails = Array[ExtResource("2_0ebsy")]([SubResource("Resource_ou381"), SubResource("Resource_hinck"), SubResource("Resource_b43q5"), SubResource("Resource_n02c0")])
+search_results = Array[ExtResource("3_b43q5")]([SubResource("Resource_72iso"), SubResource("Resource_38bpc"), SubResource("Resource_yewyn"), SubResource("Resource_byh4l")])
+blog_posts = Array[ExtResource("4_hinck")]([SubResource("Resource_wshnm"), SubResource("Resource_068d4"), SubResource("Resource_rjw16"), SubResource("Resource_730wy"), SubResource("Resource_opsgy"), SubResource("Resource_eetof"), SubResource("Resource_qinfc"), SubResource("Resource_dmh8s"), SubResource("Resource_wtwmm"), SubResource("Resource_pkm2a")])
+infos = Array[ExtResource("4_b43q5")]([SubResource("Resource_b2kmk"), SubResource("Resource_vpphb"), SubResource("Resource_yys8v")])
 no_results_message = "No results found.
 
 Did you misspell something?"

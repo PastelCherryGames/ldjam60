@@ -68,9 +68,11 @@ layout_mode = 2
 
 [node name="SubjectLabel" type="Label" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox" index="0" unique_id=1184828878]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-text = "Email 1"
+text = "Have you heard of the Eidolon Cybersaga?"
 label_settings = ExtResource("2_wdckx")
+autowrap_mode = 2
 
 [node name="FromHBox" type="HBoxContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/DetailsVBox" index="1" unique_id=1008010170]
 layout_mode = 2
@@ -112,7 +114,6 @@ label_settings = ExtResource("3_auxxb")
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 100
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer/HBoxContainer/Details/MarginContainer" index="0" unique_id=1771261928]
 layout_mode = 2

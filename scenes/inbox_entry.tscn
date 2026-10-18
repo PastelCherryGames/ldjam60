@@ -72,9 +72,11 @@ theme_override_constants/separation = 0
 
 [node name="SubjectLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1911934651]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
-text = "Email Subject"
+text = "Have you heard of the Eidolon Cybersaga?"
 label_settings = ExtResource("3_lcm1s")
+autowrap_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1090068671]
 layout_mode = 2
@@ -85,9 +87,11 @@ layout_mode = 2
 
 [node name="FromLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=929374152]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(216, 0)
 layout_mode = 2
 text = "Old Tech Enthusiast"
 label_settings = ExtResource("4_f6685")
+autowrap_mode = 3
 
 [node name="OwnButton" type="TextureButton" parent="." unique_id=20519200]
 unique_name_in_owner = true

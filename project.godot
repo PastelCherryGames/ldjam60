@@ -23,6 +23,7 @@ GameState="*uid://h5fkcbd4oja2"
 
 window/size/viewport_width=1024
 window/size/viewport_height=768
+window/stretch/mode="canvas_items"
 
 [gui]
 

@@ -46,7 +46,7 @@ func _show_email_details(email_id: int) -> void:
 	email.read = true
 	subject_label.text = email.email_subject
 	from_label.text = email.email_from
-	to_label.text = email.email_to
+	to_label.text = GameState.EMAIL_TO
 	body_label.text = email.email_body
 	details.show()
 	GameState.email_read.emit(email_id)

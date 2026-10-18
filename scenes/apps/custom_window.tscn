@@ -51,33 +51,69 @@ texture = SubResource("GradientTexture2D_0wfyh")
 modulate_color = Color(1, 1, 1, 0.78431374)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8ta81"]
+font_size = 18
 font_color = Color(0.2, 0.2, 0.2, 1)
 outline_size = 1
 outline_color = Color(0.2, 0.2, 0.2, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ta81"]
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpvlw"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.5019608, 0.7921569, 1, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvefq"]
-bg_color = Color(0, 0, 0, 0.6)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l2n1"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.45, 0.71250004, 0.9, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 5
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 2)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_padt6"]
-bg_color = Color(0.225, 0.225, 0.225, 0.6)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wquj"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.65, 0.85416675, 1, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 5
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5edl"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.76, 0.87083334, 0.95, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4ljp"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.6509804, 0.85490197, 1, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wfyh"]
 bg_color = Color(1, 1, 1, 1)
@@ -150,11 +186,11 @@ theme_override_constants/margin_bottom = 5
 unique_name_in_owner = true
 layout_mode = 2
 mouse_default_cursor_shape = 2
-theme_override_colors/font_outline_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
-theme_override_constants/outline_size = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_8ta81")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_yvefq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_padt6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpvlw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7l2n1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8wquj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_r5edl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_m4ljp")
 text = "X"
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/PanelContainer" unique_id=747586950]

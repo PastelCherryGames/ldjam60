@@ -2,6 +2,7 @@ extends CustomWindow
 class_name BlogApp
 
 
+@onready var empty_label: Label = %EmptyLabel
 @onready var infos_vbox: Container = %InfosVBox
 @onready var blog_posts_vbox: Container = %BlogPostsVBox
 
@@ -27,6 +28,7 @@ func _refresh_infos() -> void:
 	GameState.infos.sort_custom(GameState.sort_infos)
 	for info in GameState.infos:
 		if info.discovered_index > -1:
+			if empty_label.visible: empty_label.hide()
 			var entry: InfoEntry = GameState.info_entry_scene.instantiate()
 			entry.set_up_info_entry(info)
 			infos_vbox.add_child(entry)

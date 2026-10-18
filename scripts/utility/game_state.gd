@@ -15,6 +15,7 @@ signal blog_post_published(post_id: int)
 
 
 const UI_PAUSE_LENGTH: float = 0.075
+const EMAIL_TO: String = 'Old Tech Enthusiast'
 
 @export var app_names: Dictionary[E.App, String] = {}
 @export var emails: Array[EmailRes] = []:
