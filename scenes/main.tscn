@@ -20,6 +20,115 @@ colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.28235295)
 gradient = SubResource("Gradient_sgp6g")
 fill_to = Vector2(0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
+draw_center = false
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63u0e"]
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Gradient" id="Gradient_o5qli"]
+offsets = PackedFloat32Array(0, 0.390625, 0.78125, 1)
+colors = PackedColorArray(0.5751, 0.5751, 0.71, 1, 0.7047, 0.70645505, 0.81, 1, 0.57254905, 0.57254905, 0.7058824, 1, 0.66630745, 0.6672162, 0.78315854, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0wfyh"]
+gradient = SubResource("Gradient_o5qli")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sugp2"]
+texture = SubResource("GradientTexture2D_0wfyh")
+modulate_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ta81"]
+font_size = 18
+font_color = Color(0.2, 0.2, 0.2, 1)
+outline_size = 1
+outline_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpvlw"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.5019608, 0.7921569, 1, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l2n1"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.45, 0.71250004, 0.9, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wquj"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.65, 0.85416675, 1, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5edl"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.76, 0.87083334, 0.95, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4ljp"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.6509804, 0.85490197, 1, 1)
+border_color = Color(0.14901961, 0.44313726, 0.8784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(-1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wfyh"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.55, 0.55, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_ya4ey"]
+font_size = 96
+font_color = Color(0.1428, 0.2706199, 0.84, 1)
+outline_size = 1
+outline_color = Color(0.14117648, 0.27058825, 0.8392157, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sugp2"]
 draw_center = false
 corner_radius_top_left = 4
@@ -101,16 +210,115 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="EmailWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=122213665 instance=ExtResource("3_o6xl0")]
+visible = false
 layout_mode = 1
 
 [node name="InternetWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=940131225 instance=ExtResource("4_tipki")]
+visible = false
 layout_mode = 1
 
 [node name="BlogWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=884958558 instance=ExtResource("5_85g3d")]
+visible = false
 layout_mode = 1
 
 [node name="PortalWindow" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=404913768 instance=ExtResource("6_choun")]
+visible = false
 layout_mode = 1
+
+[node name="CustomWindow" type="PanelContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl" unique_id=1084310658]
+visible = false
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -250.0
+offset_right = 400.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 1)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5qli")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow" unique_id=2086982906]
+clip_children = 1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_63u0e")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer" unique_id=1815138627]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sugp2")
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer/PanelContainer" unique_id=549768957]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="WindowLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer/PanelContainer/MarginContainer3" unique_id=1749945117]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Window Name"
+label_settings = SubResource("LabelSettings_8ta81")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer/PanelContainer" unique_id=709406097]
+custom_minimum_size = Vector2(40, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer/PanelContainer/MarginContainer2" unique_id=1593755636]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpvlw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7l2n1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8wquj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_r5edl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_m4ljp")
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer/PanelContainer" unique_id=747586950]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer/PanelContainer/MarginContainer" unique_id=1198304804]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0wfyh")
+
+[node name="ContentContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer" unique_id=722223955]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/WindowControl/CustomWindow/PanelContainer/PanelContainer/MarginContainer/PanelContainer/ContentContainer" unique_id=94161910]
+layout_mode = 2
+text = "The Cybersaga"
+label_settings = SubResource("LabelSettings_ya4ey")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TaskBar" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=519065725]
 unique_name_in_owner = true

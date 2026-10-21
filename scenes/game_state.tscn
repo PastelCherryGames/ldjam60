@@ -59,7 +59,7 @@ email_body = "A friend sent me your blog post quoting me, and I ended up reading
 
 I'm pretty sure my NDA is over since Eidolon is long gone, so I've included my old company login for the portal. Even though the company isn't in business anymore, the portal was still up the last time I checked.
 
-Take a look and see if you find anything interesting. If you search my name in the portal, it'll pull up my company profile, so maybe start there?"
+Take a look and see if you find anything interesting. If nothing else, there should be more information about the Cybersaga."
 email_num_blog_posts = 4
 trigger_portal = true
 
@@ -124,7 +124,7 @@ They're most famous for their Game and Go handheld consoles. Even today, you can
 [sub_resource type="Resource" id="Resource_td4en"]
 script = ExtResource("3_b43q5")
 id = 5
-search_result_keywords = Array[String](["eidolon bestsellers bundle", "bestsellers bundle", "eidolon bestseller bundle", "bestseller bundle"])
+search_result_keywords = Array[String](["eidolon bestsellers bundle", "bestsellers bundle", "eidolon bestseller bundle", "bestseller bundle", "eidolon bestsellers bundles", "bestsellers bundles", "eidolon bestseller bundles", "bestseller bundles"])
 discoverable_infos = Array[int]([4])
 search_result_text = "The Eidolon Bestsellers Bundle was a collection of Eidolon's most popular games for the Game and Go, designed to be the perfect gift for the gamer in your life. They're now a sought-after collector's item, even though few people actually play the games anymore.
 
@@ -135,9 +135,9 @@ You also find a listing for a supposed unreleased prototype of a 3D sequel to Cr
 [sub_resource type="Resource" id="Resource_00i5b"]
 script = ExtResource("3_b43q5")
 id = 6
-search_result_keywords = Array[String](["crazy pineapple guy"])
+search_result_keywords = Array[String](["crazy pineapple man"])
 discoverable_infos = Array[int]([6])
-search_result_text = "Crazy Pineapple Guy was a widely loved fruit juggling platformer developed by Eidolon.
+search_result_text = "Crazy Pineapple Man was a widely loved fruit juggling platformer developed by Eidolon.
 
 A closer look at the search results reveal that many fans back in 2001 were hoping for a 3D sequel for the Cybersaga once it was announced that the console would exclusively cater to new 3D titles. Several game journalists predicted that the CS was Eidolon's first step in pivoting away from 2D."
 
@@ -254,7 +254,9 @@ id = 0
 search_result_keywords = Array[String](["cybersaga"])
 search_result_text = "FOLDER: Cybersaga
 
-The Cybersaga's folder is overflowing with documents, but a design for a poster catches your eye. It shows the Cybersaga with the words \"An immersive new world powered by the Saga Crystal\" underneath it."
+The Cybersaga's folder is overflowing with documents, but a design for a poster catches your eye. It shows the Cybersaga with the words \"An immersive new world powered by the Saga Crystal\" underneath it.
+
+You also find broken links to several employee profiles."
 
 [sub_resource type="Resource" id="Resource_1cg44"]
 script = ExtResource("3_b43q5")
